@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://demnycarson.github.io/sitemap.xml
