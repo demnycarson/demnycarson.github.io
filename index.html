@@ -69,7 +69,7 @@ html{scroll-behavior:smooth}
 .form-card textarea{min-height:96px;resize:vertical}
 .form-card input:focus,.form-card textarea:focus{outline:3px solid #000;outline-offset:2px}
 .form-card button{display:flex;align-items:center;justify-content:center;width:100%;min-height:56px;border:2px solid #000;background:#000;color:#fff;font:700 18px "Space Grotesk",sans-serif;cursor:pointer}
-.form-card button:hover{background:#333}
+
 .form-card .row2{display:grid;grid-template-columns:1fr 1fr;gap:0 14px}
 @media (max-width:520px){.form-card .row2{grid-template-columns:1fr}.form-card{padding:24px}}
 .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
@@ -102,13 +102,23 @@ html{scroll-behavior:smooth}
 }
 .progress{position:fixed;top:0;left:0;height:4px;width:100%;background:#000;transform-origin:0 50%;transform:scaleX(0);z-index:200;pointer-events:none}
 /* hover */
-.btn,.card,.lift,.faq-item,.photo,.scores li{transition:transform .18s ease,box-shadow .18s ease,background-color .2s ease,color .2s ease}
-.nav{background:linear-gradient(currentColor,currentColor) 0 100%/0 2px no-repeat;transition:background-size .25s ease;padding-bottom:2px}
+#demo video,.form-card button,.callbar a,.btn,.card,.lift,.faq-item,.photo,.scores li{transition:transform .18s ease,box-shadow .18s ease,background-color .2s ease,color .2s ease}
+.nav{padding:2px 4px;margin:-2px -4px;transition:background-color .15s ease,color .15s ease}
 @media (hover:hover){
   .btn:hover{transform:translate(-3px,-3px);box-shadow:4px 4px 0 #000}
   .btn-w:hover{box-shadow:4px 4px 0 #fff}
   .btn:active{transform:none;box-shadow:none}
-  .nav:hover{background-size:100% 2px}
+  /* highlight clickable things */
+  .btn-dark:hover{background:#fff!important;color:#000!important}
+  .btn-light:hover{background:#000!important;color:#fff!important}
+  .btn-w.btn-light:hover{box-shadow:inset 0 0 0 2px #fff,4px 4px 0 #fff}
+  .callbar a:hover{background:#fff;color:#000}
+  .callbar .c2:hover{background:#000;color:#fff}
+  .form-card button:hover{background:#fff;color:#000}
+  .ba:hover .ba-knob{background:#fff;color:#000;box-shadow:0 0 0 3px #000;transform:scale(1.12)}
+  .ba-knob{transition:transform .15s ease,background-color .15s ease,color .15s ease}
+  #demo video:hover{box-shadow:6px 6px 0 #000}
+  .nav:hover{background:#000;color:#fff!important}
   .card:hover{background:#fff!important;color:#000}
   .card:hover p{color:#000!important}
   .lift:hover{transform:translateY(-6px)}
@@ -161,8 +171,8 @@ html{scroll-behavior:smooth}
 <h1 style="margin: 0; font-size: clamp(44px, 8vw, 96px); line-height: 0.95; letter-spacing: -0.04em; font-weight: 700; max-width: 900px">Need a new website? I'll build it.</h1>
 <p style="margin: 32px 0 0; font-size: 20px; line-height: 1.5; max-width: 600px">I'm Carson Demny. I build clean, fast, mobile-friendly websites for businesses anywhere in the U.S. and keep them running — all for one simple monthly price.</p>
 <div style="margin-top: 40px; display: flex; flex-wrap: wrap; gap: 16px">
-<a class="btn" href="#contact" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; background: #000000; color: #ffffff; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #000000">Get a free website check</a>
-<a class="btn" href="#work" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; background: #ffffff; color: #000000; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #000000">See a sample site</a>
+<a class="btn-dark btn" href="#contact" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; background: #000000; color: #ffffff; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #000000">Get a free website check</a>
+<a class="btn-light btn" href="#work" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; background: #ffffff; color: #000000; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #000000">See a sample site</a>
 </div>
 <div class="scores">
 <ul aria-label="Google Lighthouse scores for this website, tested on mobile">
@@ -193,7 +203,7 @@ html{scroll-behavior:smooth}
 <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #ffffff">Search setup so customers find you on Google, Google Maps and AI tools like ChatGPT, whether you serve one town or the whole country.</p>
 </div>
 </div>
-<div class="reveal" style="margin-top: 40px; display: flex; flex-wrap: wrap; gap: 16px; align-items: center"><a class="btn btn-w" href="#contact" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #ffffff; background: #ffffff; color: #000000">Get a free website check</a><a class="btn btn-w" href="#pricing" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #ffffff; background: #000000; color: #ffffff">See pricing</a></div>
+<div class="reveal" style="margin-top: 40px; display: flex; flex-wrap: wrap; gap: 16px; align-items: center"><a class="btn-light btn btn-w" href="#contact" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #ffffff; background: #ffffff; color: #000000">Get a free website check</a><a class="btn-dark btn btn-w" href="#pricing" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #ffffff; background: #000000; color: #ffffff">See pricing</a></div>
 </div>
 </section>
 
@@ -215,8 +225,8 @@ html{scroll-behavior:smooth}
 <div class="lift" style="flex: 1 1 200px; background: #fff; padding: 24px"><div style="font-size: 44px; font-weight: 700; letter-spacing: -0.03em">3</div><p style="margin: 4px 0 0; font-size: 16px">city pages written with real local details, not copy-paste</p></div>
 </div>
 <div class="reveal" style="margin-top: 32px; display: flex; flex-wrap: wrap; gap: 16px; align-items: center">
-<a class="btn" href="/sample/cedar-creek/" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; background: #000000; color: #ffffff; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #000000">Click through the sample site &rarr;</a>
-<a class="btn" href="#contact" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #000000; background: #ffffff; color: #000000">Want one like this?</a>
+<a class="btn-dark btn" href="/sample/cedar-creek/" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; background: #000000; color: #ffffff; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #000000">Click through the sample site &rarr;</a>
+<a class="btn-light btn" href="#contact" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #000000; background: #ffffff; color: #000000">Want one like this?</a>
 <span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px">Cedar Creek Plumbing is not a real business.</span>
 </div>
 </section>
@@ -234,7 +244,7 @@ Your browser can't play this video. <a href="demny-demo.mp4">Download it here.</
 <source src="demny-demo-phone.mp4" type="video/mp4">
 Your browser can't play this video. <a href="demny-demo-phone.mp4">Download it here.</a>
 </video>
-<div class="reveal" style="margin-top: 40px; display: flex; flex-wrap: wrap; gap: 16px; align-items: center"><a class="btn" href="#contact" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #000000; background: #000000; color: #ffffff">Get a free website check</a><a class="btn" href="tel:+18327453523" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #000000; background: #ffffff; color: #000000">Call (832) 745-3523</a></div>
+<div class="reveal" style="margin-top: 40px; display: flex; flex-wrap: wrap; gap: 16px; align-items: center"><a class="btn-dark btn" href="#contact" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #000000; background: #000000; color: #ffffff">Get a free website check</a><a class="btn-light btn" href="tel:+18327453523" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #000000; background: #ffffff; color: #000000">Call (832) 745-3523</a></div>
 </div>
 </section>
 
@@ -259,7 +269,7 @@ Your browser can't play this video. <a href="demny-demo-phone.mp4">Download it h
 <p style="margin: 0; font-size: 16px; line-height: 1.6">Updates, fixes and search work handled every month so you don't have to think about it.</p>
 </div>
 </div>
-<div class="reveal" style="margin-top: 40px; display: flex; flex-wrap: wrap; gap: 16px; align-items: center"><a class="btn" href="#contact" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #000000; background: #000000; color: #ffffff">Start with step 1</a><a class="btn" href="#pricing" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #000000; background: #ffffff; color: #000000">See pricing</a></div>
+<div class="reveal" style="margin-top: 40px; display: flex; flex-wrap: wrap; gap: 16px; align-items: center"><a class="btn-dark btn" href="#contact" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #000000; background: #000000; color: #ffffff">Start with step 1</a><a class="btn-light btn" href="#pricing" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #000000; background: #ffffff; color: #000000">See pricing</a></div>
 </div>
 </section>
 
@@ -271,7 +281,7 @@ Your browser can't play this video. <a href="demny-demo-phone.mp4">Download it h
 <h2 style="margin: 0 0 24px; font-size: clamp(32px, 5vw, 56px); letter-spacing: -0.03em; line-height: 1">Hi, I'm Carson.</h2>
 <p style="margin: 0 0 16px; font-size: 18px; line-height: 1.6; max-width: 600px">I grew up in Cypress, Texas, and I'm currently studying instrumentation at TSTC. I started Demny Web Agency because I love helping people succeed, and building my own business is the dream I'm working toward every day.</p>
 <p style="margin: 0 0 28px; font-size: 18px; line-height: 1.6; max-width: 600px">When you work with me, you work with me directly. No account managers, no runaround: one person who answers your calls, knows your website inside and out, and wants your business to grow.</p>
-<a class="btn" href="#contact" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; background: #000000; color: #ffffff; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #000000">Talk to Carson</a>
+<a class="btn-dark btn" href="#contact" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; background: #000000; color: #ffffff; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #000000">Talk to Carson</a>
 </div>
 </div>
 </section>
@@ -298,7 +308,7 @@ Your browser can't play this video. <a href="demny-demo-phone.mp4">Download it h
 <li>A simple report</li>
 </ul>
 <p style="margin: 0 0 28px; font-size: 15px; line-height: 1.6; border-top: 1px solid #ffffff; padding-top: 16px">3-month minimum, then month-to-month. Cancel anytime after that with 30 days' notice. Want to keep your site if you leave? Buy the site files for a one-time $500.</p>
-<a class="btn btn-w" href="#contact" style="display: inline-flex; align-items: center; justify-content: center; min-height: 52px; padding: 0 28px; background: #ffffff; color: #000000; text-decoration: none; font-weight: 700; font-size: 17px">Get started</a>
+<a class="btn-light btn btn-w" href="#contact" style="display: inline-flex; align-items: center; justify-content: center; min-height: 52px; padding: 0 28px; background: #ffffff; color: #000000; text-decoration: none; font-weight: 700; font-size: 17px">Get started</a>
 </div>
 </section>
 
@@ -345,7 +355,7 @@ Your browser can't play this video. <a href="demny-demo-phone.mp4">Download it h
 <h3 style="margin: 0 0 8px; font-size: 20px">How do I get started?</h3>
 <p style="margin: 0; font-size: 16px; line-height: 1.6; max-width: 720px">Email carsondemny@gmail.com or call (832) 745-3523 and tell me about your business. I'll get back to you quickly.</p>
 </div>
-<div class="reveal" style="margin-top: 40px; display: flex; flex-wrap: wrap; gap: 16px; align-items: center"><span style="font-size: 18px; font-weight: 700">Still have a question?</span><a class="btn" href="#contact" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #000000; background: #000000; color: #ffffff">Ask me directly</a><a class="btn" href="tel:+18327453523" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #000000; background: #ffffff; color: #000000">Call (832) 745-3523</a></div>
+<div class="reveal" style="margin-top: 40px; display: flex; flex-wrap: wrap; gap: 16px; align-items: center"><span style="font-size: 18px; font-weight: 700">Still have a question?</span><a class="btn-dark btn" href="#contact" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #000000; background: #000000; color: #ffffff">Ask me directly</a><a class="btn-light btn" href="tel:+18327453523" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #000000; background: #ffffff; color: #000000">Call (832) 745-3523</a></div>
 </section>
 
 <section id="contact" style="background: #000000; color: #ffffff">
@@ -355,8 +365,8 @@ Your browser can't play this video. <a href="demny-demo-phone.mp4">Download it h
 <h2 style="margin: 0; font-size: clamp(36px, 6vw, 72px); letter-spacing: -0.04em; line-height: 0.95">Is your website costing you customers?</h2>
 <p style="margin: 24px 0 0; font-size: 18px; line-height: 1.6; max-width: 480px">Send me your website (or tell me you don't have one). I'll look it over for free and send you a short report: what's working, what's not, and what I'd change. No pressure to sign up.</p>
 <div style="margin-top: 32px; display: flex; flex-direction: column; gap: 12px; max-width: 360px">
-<a class="btn btn-w" href="tel:+18327453523" style="display: inline-flex; align-items: center; justify-content: center; min-height: 56px; padding: 0 28px; background: #000000; color: #ffffff; text-decoration: none; font-weight: 700; font-size: 18px; border: 2px solid #ffffff">Call (832) 745-3523</a>
-<a class="btn btn-w" href="mailto:carsondemny@gmail.com" style="display: inline-flex; align-items: center; justify-content: center; min-height: 56px; padding: 0 28px; background: #000000; color: #ffffff; text-decoration: none; font-weight: 700; font-size: 18px; border: 2px solid #ffffff">Email carsondemny@gmail.com</a>
+<a class="btn-dark btn btn-w" href="tel:+18327453523" style="display: inline-flex; align-items: center; justify-content: center; min-height: 56px; padding: 0 28px; background: #000000; color: #ffffff; text-decoration: none; font-weight: 700; font-size: 18px; border: 2px solid #ffffff">Call (832) 745-3523</a>
+<a class="btn-dark btn btn-w" href="mailto:carsondemny@gmail.com" style="display: inline-flex; align-items: center; justify-content: center; min-height: 56px; padding: 0 28px; background: #000000; color: #ffffff; text-decoration: none; font-weight: 700; font-size: 18px; border: 2px solid #ffffff">Email carsondemny@gmail.com</a>
 </div>
 </div>
 <form id="check" class="form-card reveal" action="https://formsubmit.co/carsondemny@gmail.com" method="POST" style="flex: 1 1 420px; max-width: 520px">
