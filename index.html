@@ -87,6 +87,43 @@ html{scroll-behavior:smooth}
 .scores span{font:500 13px/1.2 "IBM Plex Mono",monospace;text-transform:uppercase;letter-spacing:.06em}
 .scores p{margin:14px 0 0;font:400 13px/1.5 "IBM Plex Mono",monospace;color:#333}
 @media (max-width:520px){.scores ul{display:grid;grid-template-columns:1fr 1fr;gap:8px}.scores li{padding:6px 8px 6px 6px;gap:8px;min-width:0}.scores b{width:38px;height:38px;font-size:13px;flex:none}.scores span{font-size:10px;letter-spacing:0;overflow-wrap:anywhere}}
+
+/* scroll: stagger children + progress bar */
+.js .stagger>*{opacity:0;transform:translateY(24px);transition:opacity .5s ease,transform .5s ease}
+.js .stagger.in>*{opacity:1;transform:none}
+.js .stagger.in>*:nth-child(2){transition-delay:.12s}
+.js .stagger.in>*:nth-child(3){transition-delay:.24s}
+.js .stagger.in>*:nth-child(4){transition-delay:.36s}
+.js .stagger.done>*{transition:transform .18s ease,background-color .2s ease,color .2s ease;transition-delay:0s}
+.js .faq-item.reveal.in{transition:opacity .6s ease,transform .18s ease}
+@media (hover:hover){
+  .js .stagger.in>.lift:hover{transform:translateY(-6px)}
+  .js .faq-item.reveal.in:hover{transform:translateX(8px)}
+}
+.progress{position:fixed;top:0;left:0;height:4px;width:100%;background:#000;transform-origin:0 50%;transform:scaleX(0);z-index:200;pointer-events:none}
+/* hover */
+.btn,.card,.lift,.faq-item,.photo,.scores li{transition:transform .18s ease,box-shadow .18s ease,background-color .2s ease,color .2s ease}
+.nav{background:linear-gradient(currentColor,currentColor) 0 100%/0 2px no-repeat;transition:background-size .25s ease;padding-bottom:2px}
+@media (hover:hover){
+  .btn:hover{transform:translate(-3px,-3px);box-shadow:4px 4px 0 #000}
+  .btn-w:hover{box-shadow:4px 4px 0 #fff}
+  .btn:active{transform:none;box-shadow:none}
+  .nav:hover{background-size:100% 2px}
+  .card:hover{background:#fff!important;color:#000}
+  .card:hover p{color:#000!important}
+  .lift:hover{transform:translateY(-6px)}
+  .faq-item:hover{transform:translateX(8px)}
+  .photo:hover{transform:translate(-4px,-4px) rotate(-1deg);box-shadow:8px 8px 0 #000}
+  .scores li:hover{background:#000;color:#fff}
+  .scores li:hover b{border-color:#fff}
+}
+@media (prefers-reduced-motion:reduce){
+  .js .stagger>*{opacity:1;transform:none;transition:none}
+  .btn,.card,.lift,.faq-item,.photo,.scores li,.nav{transition:none}
+  .btn:hover,.lift:hover,.faq-item:hover,.photo:hover{transform:none}
+  .progress{display:none}
+}
+@media print{.js .stagger>*{opacity:1;transform:none}.progress{display:none}}
 /* phone call bar */
 .callbar{display:none}
 @media (max-width:700px){
@@ -102,17 +139,18 @@ html{scroll-behavior:smooth}
 <a class="skip" href="#main">Skip to content</a>
 <div style="font-family: 'Space Grotesk', system-ui, sans-serif; color: #000000; background: #ffffff; min-height: 100vh">
 
+<div class="progress" aria-hidden="true"></div>
 <header style="border-bottom: 2px solid #000000">
 <nav aria-label="Main" style="max-width: 1120px; margin: 0 auto; padding: 20px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
 <a href="#top" style="display: inline-flex; align-items: center; gap: 10px; font-weight: 700; font-size: 22px; letter-spacing: -0.02em; text-decoration: none; color: #000000"><img src="logo-mark.png" alt="" width="32" height="35" style="display: block; height: 35px; width: auto"><span>DEMNY<span style="font-weight: 400">/web</span></span></a>
 <div style="display: flex; flex-wrap: wrap; gap: 8px 24px; font-family: 'IBM Plex Mono', monospace; font-size: 14px">
-<a href="#services" style="text-decoration: none">Services</a>
-<a href="#work" style="text-decoration: none">Work</a>
-<a href="#demo" style="text-decoration: none">Demo</a>
-<a href="#about" style="text-decoration: none">About</a>
-<a href="#pricing" style="text-decoration: none">Pricing</a>
-<a href="#faq" style="text-decoration: none">FAQ</a>
-<a href="#contact" style="text-decoration: none">Contact</a>
+<a class="nav" href="#services" style="text-decoration: none">Services</a>
+<a class="nav" href="#work" style="text-decoration: none">Work</a>
+<a class="nav" href="#demo" style="text-decoration: none">Demo</a>
+<a class="nav" href="#about" style="text-decoration: none">About</a>
+<a class="nav" href="#pricing" style="text-decoration: none">Pricing</a>
+<a class="nav" href="#faq" style="text-decoration: none">FAQ</a>
+<a class="nav" href="#contact" style="text-decoration: none">Contact</a>
 </div>
 </nav>
 </header>
@@ -123,8 +161,8 @@ html{scroll-behavior:smooth}
 <h1 style="margin: 0; font-size: clamp(44px, 8vw, 96px); line-height: 0.95; letter-spacing: -0.04em; font-weight: 700; max-width: 900px">Need a new website? I'll build it.</h1>
 <p style="margin: 32px 0 0; font-size: 20px; line-height: 1.5; max-width: 600px">I'm Carson Demny. I build clean, fast, mobile-friendly websites for businesses anywhere in the U.S. and keep them running — all for one simple monthly price.</p>
 <div style="margin-top: 40px; display: flex; flex-wrap: wrap; gap: 16px">
-<a href="#contact" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; background: #000000; color: #ffffff; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #000000">Get a free website check</a>
-<a href="#work" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; background: #ffffff; color: #000000; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #000000">See a sample site</a>
+<a class="btn" href="#contact" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; background: #000000; color: #ffffff; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #000000">Get a free website check</a>
+<a class="btn" href="#work" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; background: #ffffff; color: #000000; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #000000">See a sample site</a>
 </div>
 <div class="scores">
 <ul aria-label="Google Lighthouse scores for this website, tested on mobile">
@@ -141,21 +179,21 @@ html{scroll-behavior:smooth}
 <div style="max-width: 1120px; margin: 0 auto; padding: 88px 24px">
 <p class="reveal" style="margin: 0 0 12px; font-family: 'IBM Plex Mono', monospace; font-size: 14px; text-transform: uppercase; letter-spacing: 0.08em; color: #ffffff">01 — What I do</p>
 <h2 class="reveal" style="margin: 0 0 48px; font-size: clamp(32px, 5vw, 56px); letter-spacing: -0.03em; line-height: 1">Simple sites that work.</h2>
-<div class="reveal" style="display: flex; flex-wrap: wrap; gap: 2px; background: #ffffff; border: 2px solid #ffffff">
-<div style="flex: 1 1 300px; background: #000000; padding: 32px">
+<div class="reveal stagger" style="display: flex; flex-wrap: wrap; gap: 2px; background: #ffffff; border: 2px solid #ffffff">
+<div class="card" style="flex: 1 1 300px; background: #000000; padding: 32px">
 <h3 style="margin: 0 0 12px; font-size: 24px">Brand-new websites</h3>
 <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #ffffff">A custom site built from scratch around what your business does and what your customers need.</p>
 </div>
-<div style="flex: 1 1 300px; background: #000000; padding: 32px">
+<div class="card" style="flex: 1 1 300px; background: #000000; padding: 32px">
 <h3 style="margin: 0 0 12px; font-size: 24px">A page for every service</h3>
 <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #ffffff">Each service and city gets its own page and its own contact form, so more people find you and you know what every lead wants.</p>
 </div>
-<div style="flex: 1 1 300px; background: #000000; padding: 32px">
+<div class="card" style="flex: 1 1 300px; background: #000000; padding: 32px">
 <h3 style="margin: 0 0 12px; font-size: 24px">Get found on Google and AI</h3>
 <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #ffffff">Search setup so customers find you on Google, Google Maps and AI tools like ChatGPT, whether you serve one town or the whole country.</p>
 </div>
 </div>
-<div class="reveal" style="margin-top: 40px; display: flex; flex-wrap: wrap; gap: 16px; align-items: center"><a href="#contact" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #ffffff; background: #ffffff; color: #000000">Get a free website check</a><a href="#pricing" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #ffffff; background: #000000; color: #ffffff">See pricing</a></div>
+<div class="reveal" style="margin-top: 40px; display: flex; flex-wrap: wrap; gap: 16px; align-items: center"><a class="btn btn-w" href="#contact" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #ffffff; background: #ffffff; color: #000000">Get a free website check</a><a class="btn btn-w" href="#pricing" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #ffffff; background: #000000; color: #ffffff">See pricing</a></div>
 </div>
 </section>
 
@@ -171,14 +209,14 @@ html{scroll-behavior:smooth}
 <span class="ba-tag l" aria-hidden="true">Before</span><span class="ba-tag r" aria-hidden="true">After</span>
 </div>
 <p class="reveal" style="margin: 32px 0 12px; font-family: 'IBM Plex Mono', monospace; font-size: 14px; text-transform: uppercase; letter-spacing: 0.08em">What&rsquo;s inside the sample site</p>
-<div class="reveal" style="display: flex; flex-wrap: wrap; gap: 2px; background: #000; border: 2px solid #000">
-<div style="flex: 1 1 200px; background: #fff; padding: 24px"><div style="font-size: 44px; font-weight: 700; letter-spacing: -0.03em">11</div><p style="margin: 4px 0 0; font-size: 16px">pages: one for each service and city, plus FAQ and contact</p></div>
-<div style="flex: 1 1 200px; background: #fff; padding: 24px"><div style="font-size: 44px; font-weight: 700; letter-spacing: -0.03em">11</div><p style="margin: 4px 0 0; font-size: 16px">separate contact forms, each labeled by the page it's on</p></div>
-<div style="flex: 1 1 200px; background: #fff; padding: 24px"><div style="font-size: 44px; font-weight: 700; letter-spacing: -0.03em">3</div><p style="margin: 4px 0 0; font-size: 16px">city pages written with real local details, not copy-paste</p></div>
+<div class="reveal stagger" style="display: flex; flex-wrap: wrap; gap: 2px; background: #000; border: 2px solid #000">
+<div class="lift" style="flex: 1 1 200px; background: #fff; padding: 24px"><div style="font-size: 44px; font-weight: 700; letter-spacing: -0.03em">11</div><p style="margin: 4px 0 0; font-size: 16px">pages: one for each service and city, plus FAQ and contact</p></div>
+<div class="lift" style="flex: 1 1 200px; background: #fff; padding: 24px"><div style="font-size: 44px; font-weight: 700; letter-spacing: -0.03em">11</div><p style="margin: 4px 0 0; font-size: 16px">separate contact forms, each labeled by the page it's on</p></div>
+<div class="lift" style="flex: 1 1 200px; background: #fff; padding: 24px"><div style="font-size: 44px; font-weight: 700; letter-spacing: -0.03em">3</div><p style="margin: 4px 0 0; font-size: 16px">city pages written with real local details, not copy-paste</p></div>
 </div>
 <div class="reveal" style="margin-top: 32px; display: flex; flex-wrap: wrap; gap: 16px; align-items: center">
-<a href="/sample/cedar-creek/" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; background: #000000; color: #ffffff; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #000000">Click through the sample site &rarr;</a>
-<a href="#contact" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #000000; background: #ffffff; color: #000000">Want one like this?</a>
+<a class="btn" href="/sample/cedar-creek/" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; background: #000000; color: #ffffff; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #000000">Click through the sample site &rarr;</a>
+<a class="btn" href="#contact" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #000000; background: #ffffff; color: #000000">Want one like this?</a>
 <span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px">Cedar Creek Plumbing is not a real business.</span>
 </div>
 </section>
@@ -196,7 +234,7 @@ Your browser can't play this video. <a href="demny-demo.mp4">Download it here.</
 <source src="demny-demo-phone.mp4" type="video/mp4">
 Your browser can't play this video. <a href="demny-demo-phone.mp4">Download it here.</a>
 </video>
-<div class="reveal" style="margin-top: 40px; display: flex; flex-wrap: wrap; gap: 16px; align-items: center"><a href="#contact" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #000000; background: #000000; color: #ffffff">Get a free website check</a><a href="tel:+18327453523" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #000000; background: #ffffff; color: #000000">Call (832) 745-3523</a></div>
+<div class="reveal" style="margin-top: 40px; display: flex; flex-wrap: wrap; gap: 16px; align-items: center"><a class="btn" href="#contact" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #000000; background: #000000; color: #ffffff">Get a free website check</a><a class="btn" href="tel:+18327453523" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #000000; background: #ffffff; color: #000000">Call (832) 745-3523</a></div>
 </div>
 </section>
 
@@ -204,36 +242,36 @@ Your browser can't play this video. <a href="demny-demo-phone.mp4">Download it h
 <div style="max-width: 1120px; margin: 0 auto; padding: 88px 24px">
 <p class="reveal" style="margin: 0 0 12px; font-family: 'IBM Plex Mono', monospace; font-size: 14px; text-transform: uppercase; letter-spacing: 0.08em">04 — How it works</p>
 <h2 class="reveal" style="margin: 0 0 48px; font-size: clamp(32px, 5vw, 56px); letter-spacing: -0.03em; line-height: 1">Three steps. No hassle.</h2>
-<div class="reveal" style="display: flex; flex-wrap: wrap; gap: 40px">
-<div style="flex: 1 1 260px">
+<div class="reveal stagger" style="display: flex; flex-wrap: wrap; gap: 40px">
+<div class="lift" style="flex: 1 1 260px">
 <div style="font-family: 'IBM Plex Mono', monospace; font-size: 48px; font-weight: 500">1</div>
 <h3 style="margin: 8px 0; font-size: 22px">Tell me what you need</h3>
 <p style="margin: 0; font-size: 16px; line-height: 1.6">Call, email or send the free website check form. Tell me about your business and what you want your site to do.</p>
 </div>
-<div style="flex: 1 1 260px">
+<div class="lift" style="flex: 1 1 260px">
 <div style="font-family: 'IBM Plex Mono', monospace; font-size: 48px; font-weight: 500">2</div>
 <h3 style="margin: 8px 0; font-size: 22px">I build it</h3>
 <p style="margin: 0; font-size: 16px; line-height: 1.6">You get your new site to review. I tweak it until you're happy.</p>
 </div>
-<div style="flex: 1 1 260px">
+<div class="lift" style="flex: 1 1 260px">
 <div style="font-family: 'IBM Plex Mono', monospace; font-size: 48px; font-weight: 500">3</div>
 <h3 style="margin: 8px 0; font-size: 22px">I keep it running</h3>
 <p style="margin: 0; font-size: 16px; line-height: 1.6">Updates, fixes and search work handled every month so you don't have to think about it.</p>
 </div>
 </div>
-<div class="reveal" style="margin-top: 40px; display: flex; flex-wrap: wrap; gap: 16px; align-items: center"><a href="#contact" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #000000; background: #000000; color: #ffffff">Start with step 1</a><a href="#pricing" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #000000; background: #ffffff; color: #000000">See pricing</a></div>
+<div class="reveal" style="margin-top: 40px; display: flex; flex-wrap: wrap; gap: 16px; align-items: center"><a class="btn" href="#contact" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #000000; background: #000000; color: #ffffff">Start with step 1</a><a class="btn" href="#pricing" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #000000; background: #ffffff; color: #000000">See pricing</a></div>
 </div>
 </section>
 
 <section id="about" style="max-width: 1120px; margin: 0 auto; padding: 88px 24px">
 <p class="reveal" style="margin: 0 0 12px; font-family: 'IBM Plex Mono', monospace; font-size: 14px; text-transform: uppercase; letter-spacing: 0.08em">05 — About</p>
 <div class="reveal" style="display: flex; flex-wrap: wrap; gap: 48px; align-items: center">
-<picture style="flex: 0 1 340px; display: block"><source type="image/webp" srcset="img/carson.webp"><img src="img/carson.jpg" width="800" height="1000" loading="lazy" decoding="async" alt="Carson Demny, founder of Demny Web Agency" style="display: block; width: 100%; height: auto; border: 2px solid #000000"></picture>
+<picture style="flex: 0 1 340px; display: block"><source type="image/webp" srcset="img/carson.webp"><img src="img/carson.jpg" width="800" height="1000" loading="lazy" decoding="async" alt="Carson Demny, founder of Demny Web Agency" class="photo" style="display: block; width: 100%; height: auto; border: 2px solid #000000"></picture>
 <div style="flex: 1 1 420px">
 <h2 style="margin: 0 0 24px; font-size: clamp(32px, 5vw, 56px); letter-spacing: -0.03em; line-height: 1">Hi, I'm Carson.</h2>
 <p style="margin: 0 0 16px; font-size: 18px; line-height: 1.6; max-width: 600px">I grew up in Cypress, Texas, and I'm currently studying instrumentation at TSTC. I started Demny Web Agency because I love helping people succeed, and building my own business is the dream I'm working toward every day.</p>
 <p style="margin: 0 0 28px; font-size: 18px; line-height: 1.6; max-width: 600px">When you work with me, you work with me directly. No account managers, no runaround: one person who answers your calls, knows your website inside and out, and wants your business to grow.</p>
-<a href="#contact" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; background: #000000; color: #ffffff; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #000000">Talk to Carson</a>
+<a class="btn" href="#contact" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; background: #000000; color: #ffffff; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #000000">Talk to Carson</a>
 </div>
 </div>
 </section>
@@ -260,54 +298,54 @@ Your browser can't play this video. <a href="demny-demo-phone.mp4">Download it h
 <li>A simple report</li>
 </ul>
 <p style="margin: 0 0 28px; font-size: 15px; line-height: 1.6; border-top: 1px solid #ffffff; padding-top: 16px">3-month minimum, then month-to-month. Cancel anytime after that with 30 days' notice. Want to keep your site if you leave? Buy the site files for a one-time $500.</p>
-<a href="#contact" style="display: inline-flex; align-items: center; justify-content: center; min-height: 52px; padding: 0 28px; background: #ffffff; color: #000000; text-decoration: none; font-weight: 700; font-size: 17px">Get started</a>
+<a class="btn btn-w" href="#contact" style="display: inline-flex; align-items: center; justify-content: center; min-height: 52px; padding: 0 28px; background: #ffffff; color: #000000; text-decoration: none; font-weight: 700; font-size: 17px">Get started</a>
 </div>
 </section>
 
 <section id="faq" style="max-width: 1120px; margin: 0 auto; padding: 0 24px 88px">
 <p class="reveal" style="margin: 0 0 12px; font-family: 'IBM Plex Mono', monospace; font-size: 14px; text-transform: uppercase; letter-spacing: 0.08em">07 — FAQ</p>
 <h2 class="reveal" style="margin: 0 0 32px; font-size: clamp(32px, 5vw, 56px); letter-spacing: -0.03em; line-height: 1">Common questions.</h2>
-<div style="border-top: 2px solid #000000; padding: 24px 0">
+<div class="faq-item reveal" style="border-top: 2px solid #000000; padding: 24px 0">
 <h3 style="margin: 0 0 8px; font-size: 20px">How much does a website cost?</h3>
 <p style="margin: 0; font-size: 16px; line-height: 1.6; max-width: 720px">One simple price: $397 per month. That covers a custom multi-page website, hosting, your domain, SEO and AI search setup, Google Business Profile setup, and monthly work: a new page or FAQ update, 2 Google Business Profile posts, profile updates, help getting and replying to reviews, small edits and a report.</p>
 </div>
-<div style="border-top: 2px solid #000000; padding: 24px 0">
+<div class="faq-item reveal" style="border-top: 2px solid #000000; padding: 24px 0">
 <h3 style="margin: 0 0 8px; font-size: 20px">Is there a contract?</h3>
 <p style="margin: 0; font-size: 16px; line-height: 1.6; max-width: 720px">The first 3 months are a minimum, since that covers building your site. After that it's month-to-month and you can cancel anytime with 30 days' notice.</p>
 </div>
-<div style="border-top: 2px solid #000000; padding: 24px 0">
+<div class="faq-item reveal" style="border-top: 2px solid #000000; padding: 24px 0">
 <h3 style="margin: 0 0 8px; font-size: 20px">Who owns my domain?</h3>
 <p style="margin: 0; font-size: 16px; line-height: 1.6; max-width: 720px">I buy and manage your domain as part of the plan, registered for your business. If you ever cancel, I transfer it to you, so your business name is always yours.</p>
 </div>
-<div style="border-top: 2px solid #000000; padding: 24px 0">
+<div class="faq-item reveal" style="border-top: 2px solid #000000; padding: 24px 0">
 <h3 style="margin: 0 0 8px; font-size: 20px">What happens to my website if I cancel?</h3>
 <p style="margin: 0; font-size: 16px; line-height: 1.6; max-width: 720px">The site is part of the monthly plan, so it comes down when the plan ends. If you'd like to keep it, you can buy the site files for a one-time $500 and host them anywhere.</p>
 </div>
-<div style="border-top: 2px solid #000000; padding: 24px 0">
+<div class="faq-item reveal" style="border-top: 2px solid #000000; padding: 24px 0">
 <h3 style="margin: 0 0 8px; font-size: 20px">Do you build new websites or fix old ones?</h3>
 <p style="margin: 0; font-size: 16px; line-height: 1.6; max-width: 720px">I build brand-new websites. If your current site is outdated, I'll replace it with a new one built from scratch.</p>
 </div>
-<div style="border-top: 2px solid #000000; padding: 24px 0">
+<div class="faq-item reveal" style="border-top: 2px solid #000000; padding: 24px 0">
 <h3 style="margin: 0 0 8px; font-size: 20px">Will my business show up on Google?</h3>
 <p style="margin: 0; font-size: 16px; line-height: 1.6; max-width: 720px">Every site is built for search: clear page titles, service and location details, and the code Google reads. Search results usually take a few months to build, and no one can honestly guarantee a #1 spot.</p>
 </div>
-<div style="border-top: 2px solid #000000; padding: 24px 0">
+<div class="faq-item reveal" style="border-top: 2px solid #000000; padding: 24px 0">
 <h3 style="margin: 0 0 8px; font-size: 20px">Can you help me rank on Google Maps?</h3>
 <p style="margin: 0; font-size: 16px; line-height: 1.6; max-width: 720px">Yes. I set up and clean up your Google Business Profile (categories, services, hours, photos and service areas) and keep it active every month with posts, updates and help getting more reviews. Your website and profile are linked so Google trusts both. Maps rankings take time and also depend on your location and competition, so no one can honestly guarantee a top-3 spot, but an active, complete profile gives you the best shot.</p>
 </div>
-<div style="border-top: 2px solid #000000; padding: 24px 0">
+<div class="faq-item reveal" style="border-top: 2px solid #000000; padding: 24px 0">
 <h3 style="margin: 0 0 8px; font-size: 20px">Can you help my business show up in ChatGPT and AI search?</h3>
 <p style="margin: 0; font-size: 16px; line-height: 1.6; max-width: 720px">Yes. Every plan includes AI search setup, so tools like ChatGPT, Perplexity, Google AI Overviews and Gemini can understand what your business does and where you work.</p>
 </div>
-<div style="border-top: 2px solid #000000; padding: 24px 0">
+<div class="faq-item reveal" style="border-top: 2px solid #000000; padding: 24px 0">
 <h3 style="margin: 0 0 8px; font-size: 20px">Do you work with businesses outside Texas?</h3>
 <p style="margin: 0; font-size: 16px; line-height: 1.6; max-width: 720px">Yes. I work with businesses anywhere in the U.S. Everything happens by phone, email, text and video call, so you never need to meet in person. I set up search for the areas you actually serve, whether that's one city or nationwide.</p>
 </div>
-<div style="border-top: 2px solid #000000; padding: 24px 0">
+<div class="faq-item reveal" style="border-top: 2px solid #000000; padding: 24px 0">
 <h3 style="margin: 0 0 8px; font-size: 20px">How do I get started?</h3>
 <p style="margin: 0; font-size: 16px; line-height: 1.6; max-width: 720px">Email carsondemny@gmail.com or call (832) 745-3523 and tell me about your business. I'll get back to you quickly.</p>
 </div>
-<div class="reveal" style="margin-top: 40px; display: flex; flex-wrap: wrap; gap: 16px; align-items: center"><span style="font-size: 18px; font-weight: 700">Still have a question?</span><a href="#contact" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #000000; background: #000000; color: #ffffff">Ask me directly</a><a href="tel:+18327453523" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #000000; background: #ffffff; color: #000000">Call (832) 745-3523</a></div>
+<div class="reveal" style="margin-top: 40px; display: flex; flex-wrap: wrap; gap: 16px; align-items: center"><span style="font-size: 18px; font-weight: 700">Still have a question?</span><a class="btn" href="#contact" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #000000; background: #000000; color: #ffffff">Ask me directly</a><a class="btn" href="tel:+18327453523" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #000000; background: #ffffff; color: #000000">Call (832) 745-3523</a></div>
 </section>
 
 <section id="contact" style="background: #000000; color: #ffffff">
@@ -317,8 +355,8 @@ Your browser can't play this video. <a href="demny-demo-phone.mp4">Download it h
 <h2 style="margin: 0; font-size: clamp(36px, 6vw, 72px); letter-spacing: -0.04em; line-height: 0.95">Is your website costing you customers?</h2>
 <p style="margin: 24px 0 0; font-size: 18px; line-height: 1.6; max-width: 480px">Send me your website (or tell me you don't have one). I'll look it over for free and send you a short report: what's working, what's not, and what I'd change. No pressure to sign up.</p>
 <div style="margin-top: 32px; display: flex; flex-direction: column; gap: 12px; max-width: 360px">
-<a href="tel:+18327453523" style="display: inline-flex; align-items: center; justify-content: center; min-height: 56px; padding: 0 28px; background: #000000; color: #ffffff; text-decoration: none; font-weight: 700; font-size: 18px; border: 2px solid #ffffff">Call (832) 745-3523</a>
-<a href="mailto:carsondemny@gmail.com" style="display: inline-flex; align-items: center; justify-content: center; min-height: 56px; padding: 0 28px; background: #000000; color: #ffffff; text-decoration: none; font-weight: 700; font-size: 18px; border: 2px solid #ffffff">Email carsondemny@gmail.com</a>
+<a class="btn btn-w" href="tel:+18327453523" style="display: inline-flex; align-items: center; justify-content: center; min-height: 56px; padding: 0 28px; background: #000000; color: #ffffff; text-decoration: none; font-weight: 700; font-size: 18px; border: 2px solid #ffffff">Call (832) 745-3523</a>
+<a class="btn btn-w" href="mailto:carsondemny@gmail.com" style="display: inline-flex; align-items: center; justify-content: center; min-height: 56px; padding: 0 28px; background: #000000; color: #ffffff; text-decoration: none; font-weight: 700; font-size: 18px; border: 2px solid #ffffff">Email carsondemny@gmail.com</a>
 </div>
 </div>
 <form id="check" class="form-card reveal" action="https://formsubmit.co/carsondemny@gmail.com" method="POST" style="flex: 1 1 420px; max-width: 520px">
@@ -363,9 +401,14 @@ Your browser can't play this video. <a href="demny-demo-phone.mp4">Download it h
   if(!("IntersectionObserver" in window)){vids.forEach(showPoster);return;}
   var vio=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){showPoster(e.target);vio.unobserve(e.target);}})},{rootMargin:"600px 0px"});
   vids.forEach(function(v){vio.observe(v)});
-  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);}})},{rootMargin:"0px 0px -8% 0px"});
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var el=e.target;el.classList.add("in");io.unobserve(el);if(el.classList.contains("stagger"))setTimeout(function(){el.classList.add("done")},1100);}})},{rootMargin:"0px 0px -8% 0px"});
   document.querySelectorAll(".reveal").forEach(function(el){io.observe(el)});
 })();
+</script>
+<script>
+(function(){var b=document.querySelector(".progress");if(!b)return;var t=0;
+function u(){t=0;var h=document.documentElement,m=h.scrollHeight-h.clientHeight;b.style.transform="scaleX("+(m>0?h.scrollTop/m:0)+")";}
+addEventListener("scroll",function(){if(!t){t=1;requestAnimationFrame(u);}},{passive:true});u();})();
 </script>
 </body>
 </html>
