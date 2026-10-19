@@ -134,6 +134,24 @@ html{scroll-behavior:smooth}
   .progress{display:none}
 }
 @media print{.js .stagger>*{opacity:1;transform:none}.progress{display:none}}
+/* footer */
+.ft{background:#000;color:#fff;border-top:1px solid #333}
+.ft-in{max-width:1120px;margin:0 auto;padding:64px 24px 48px;display:grid;grid-template-columns:1.6fr 1fr 1fr 1.2fr;gap:40px}
+.ft a{color:#fff;text-decoration:none}
+.ft-logo{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:22px;letter-spacing:-.02em}
+.ft-logo img{height:35px;width:auto;filter:invert(1)}
+.ft-brand p{margin:16px 0 20px;font-size:15px;line-height:1.6;color:#bbb;max-width:320px}
+.ft-cta{display:inline-flex;align-items:center;min-height:44px;padding:0 18px;border:2px solid #fff;font-weight:700;font-size:15px;transition:background-color .15s ease,color .15s ease}
+.ft h3{margin:0 0 16px;font:500 12px/1 "IBM Plex Mono",monospace;text-transform:uppercase;letter-spacing:.1em;color:#888}
+.ft-col{display:flex;flex-direction:column;gap:12px;font-size:15px}
+.ft-col span{color:#bbb}
+.ft-col a{align-self:flex-start;transition:color .15s ease}
+.ft-bar{border-top:1px solid #333}
+.ft-bar-in{max-width:1120px;margin:0 auto;padding:20px 24px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font:400 13px/1.4 "IBM Plex Mono",monospace;color:#888}
+.ft-bar a{color:#888}
+@media (hover:hover){.ft-col a:hover,.ft-bar a:hover{color:#fff;text-decoration:underline;text-underline-offset:3px}.ft-cta:hover{background:#fff;color:#000}}
+@media (max-width:860px){.ft-in{grid-template-columns:1fr 1fr}.ft-brand{grid-column:1/-1}}
+@media (max-width:480px){.ft-in{grid-template-columns:1fr;gap:32px;padding:48px 24px 32px}}
 /* phone call bar */
 .callbar{display:none}
 @media (max-width:700px){
@@ -391,14 +409,45 @@ Your browser can't play this video. <a href="demny-demo-phone.mp4">Download it h
 <button type="submit">Send my free check request</button>
 </form>
 </div>
-<div style="border-top: 1px solid #ffffff">
-<div style="max-width: 1120px; margin: 0 auto; padding: 24px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; font-family: 'IBM Plex Mono', monospace; font-size: 13px">
-<span>© 2026 Demny Web Agency · Carson Demny</span>
-<span><a href="/sample/cedar-creek/" style="color: #ffffff">Sample site</a> · Based in Cypress, TX · Working with clients nationwide</span>
-</div>
-</div>
 </section>
 </main>
+<footer class="ft">
+<div class="ft-in">
+<div class="ft-brand">
+<a href="#top" class="ft-logo"><img src="logo-mark.png" alt="" width="32" height="35"><span>DEMNY<span style="font-weight:400">/web</span></span></a>
+<p>New websites, SEO and Google Business Profile work for small businesses across the U.S. One simple monthly price.</p>
+<a class="ft-cta" href="#contact">Get a free website check &rarr;</a>
+</div>
+<nav class="ft-col" aria-label="Footer: services">
+<h3>Services</h3>
+<a href="#services">Custom websites</a>
+<a href="#services">SEO &amp; AI search</a>
+<a href="#faq">Google Maps &amp; Business Profile</a>
+<a href="#pricing">Monthly care plan</a>
+</nav>
+<nav class="ft-col" aria-label="Footer: company">
+<h3>Company</h3>
+<a href="#about">About Carson</a>
+<a href="#work">Sample work</a>
+<a href="#demo">Demo video</a>
+<a href="#pricing">Pricing</a>
+<a href="#faq">FAQ</a>
+</nav>
+<div class="ft-col">
+<h3>Contact</h3>
+<a href="tel:+18327453523">(832) 745-3523</a>
+<a href="mailto:carsondemny@gmail.com">carsondemny@gmail.com</a>
+<span>Based in Cypress, TX</span>
+<span>Serving clients nationwide</span>
+</div>
+</div>
+<div class="ft-bar">
+<div class="ft-bar-in">
+<span>&copy; 2026 Demny Web Agency. All rights reserved.</span>
+<a href="#top">Back to top &uarr;</a>
+</div>
+</div>
+</footer>
 
 </div>
 <div class="callbar"><a class="c1" href="tel:+18327453523">Call Carson</a><a class="c2" href="#contact">Free site check</a></div>
