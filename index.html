@@ -15,34 +15,87 @@
 <meta property="og:title" content="Demny Web Agency | New Websites + SEO">
 <meta property="og:description" content="New websites with local SEO and AI search setup. One simple price: $150/month.">
 <meta property="og:url" content="https://demnycarson.github.io/">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="https://demnycarson.github.io/img/after.jpg">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="author" content="Carson Demny">
-<meta name="google-site-verification" content="PASTE-YOUR-CODE-HERE">
-<meta name="msvalidate.01" content="PASTE-YOUR-BING-CODE-HERE">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "ProfessionalService", "name": "Demny Web Agency", "url": "https://demnycarson.github.io/", "description": "New websites with local SEO and AI search setup for one simple monthly price.", "telephone": "+1-832-745-3523", "email": "carsondemny@gmail.com", "founder": {"@type": "Person", "name": "Carson Demny"}, "address": {"@type": "PostalAddress", "addressLocality": "Cypress", "addressRegion": "TX", "addressCountry": "US"}, "areaServed": "Cypress, TX", "priceRange": "$150/month", "makesOffer": {"@type": "Offer", "name": "Website plan", "price": "150", "priceCurrency": "USD", "description": "Custom new website, mobile-friendly design, local SEO and AI search setup, ongoing updates and fixes, monthly report."}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How much does a website cost?", "acceptedAnswer": {"@type": "Answer", "text": "One simple price: $150 per month. That covers a custom new website, mobile-friendly design, local SEO and AI search setup, ongoing updates and fixes, and a monthly report."}}, {"@type": "Question", "name": "Do you build new websites or fix old ones?", "acceptedAnswer": {"@type": "Answer", "text": "I build brand-new websites. If your current site is outdated, I'll replace it with a new one built from scratch."}}, {"@type": "Question", "name": "Will my business show up on Google?", "acceptedAnswer": {"@type": "Answer", "text": "Every site is built for search: clear page titles, service and location details, and the code Google reads. Search results usually take a few months to build, and no one can honestly guarantee a #1 spot."}}, {"@type": "Question", "name": "Can you help my business show up in ChatGPT and AI search?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Every plan includes AI search setup, so tools like ChatGPT, Perplexity, Google AI Overviews and Gemini can understand what your business does and where you work."}}, {"@type": "Question", "name": "How do I get started?", "acceptedAnswer": {"@type": "Answer", "text": "Email carsondemny@gmail.com or call (832) 745-3523 and tell me about your business. I'll get back to you quickly."}}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "VideoObject", "name": "How a website brings in customers \u2014 Demny Web Agency demo", "description": "Walkthrough of a multi-page website for a made-up plumbing company, with a contact form on every page, and how SEO, AEO and GEO help it get found.", "thumbnailUrl": "https://demnycarson.github.io/demo-poster.jpg", "contentUrl": "https://demnycarson.github.io/demny-demo.mp4", "uploadDate": "2026-10-17", "duration": "PT1M6S"}</script>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap">
+<link rel="preload" href="/fonts/space-grotesk-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/space-grotesk-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<script>if("IntersectionObserver" in window)document.documentElement.classList.add("js");</script>
 <style>
+@font-face{font-family:"Space Grotesk";src:url(/fonts/space-grotesk-latin-400-normal.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"Space Grotesk";src:url(/fonts/space-grotesk-latin-500-normal.woff2) format("woff2");font-weight:500;font-display:swap}
+@font-face{font-family:"Space Grotesk";src:url(/fonts/space-grotesk-latin-700-normal.woff2) format("woff2");font-weight:700;font-display:swap}
+@font-face{font-family:"IBM Plex Mono";src:url(/fonts/ibm-plex-mono-latin-400-normal.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"IBM Plex Mono";src:url(/fonts/ibm-plex-mono-latin-500-normal.woff2) format("woff2");font-weight:500;font-display:swap}
 body{margin:0;background:#ffffff}
 a{color:#000000}a:hover{color:#444444}
-</style>
-<style>
 html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+:focus-visible{outline:3px solid #000;outline-offset:3px}
+#contact :focus-visible{outline-color:#fff}
+.skip{position:absolute;left:-999px;top:0;background:#000;color:#fff;padding:10px 14px;z-index:100}
+.skip:focus{left:8px;top:8px}
 #demo video{display:block;width:100%;height:auto;margin:0 auto;border:2px solid #000;background:#000;box-sizing:border-box}
 #demo .vid-wide{max-width:960px;aspect-ratio:16/9}
 #demo .vid-tall{display:none;max-width:420px;aspect-ratio:9/16}
 @media (max-width:640px){#demo .vid-wide{display:none}#demo .vid-tall{display:block}}
+
+/* before / after */
+.ba{position:relative;border:2px solid #000;overflow:hidden;background:#eee;aspect-ratio:1200/750;--pos:50%;user-select:none;touch-action:pan-y}
+.ba img{display:block;width:100%;height:100%;object-fit:cover;object-position:top}
+.ba picture{display:block;width:100%;height:100%}
+.ba-before{position:absolute;inset:0;clip-path:inset(0 calc(100% - var(--pos)) 0 0)}
+.ba-line{position:absolute;top:0;bottom:0;left:var(--pos);width:3px;margin-left:-1.5px;background:#000;pointer-events:none}
+.ba-knob{position:absolute;top:50%;left:50%;width:48px;height:48px;margin:-24px 0 0 -24px;border-radius:50%;background:#000;color:#fff;display:grid;place-items:center;font:700 18px/1 "IBM Plex Mono",monospace;box-shadow:0 0 0 3px #fff}
+.ba-range{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:ew-resize}
+.ba-range:focus-visible + .ba-line .ba-knob{box-shadow:0 0 0 3px #fff,0 0 0 6px #000}
+.ba-tag{position:absolute;top:12px;font:500 13px/1 "IBM Plex Mono",monospace;letter-spacing:.08em;text-transform:uppercase;background:#000;color:#fff;padding:7px 10px;pointer-events:none}
+.ba-tag.l{left:12px}.ba-tag.r{right:12px}
+@media (max-width:640px){.ba{aspect-ratio:4/3}.ba img{object-position:center top}.ba-tag{top:8px;font-size:11px;padding:5px 7px}.ba-tag.l{left:8px}.ba-tag.r{right:8px}}
+
+/* form */
+.form-card{background:#fff;color:#000;padding:32px;box-sizing:border-box}
+.form-card label{display:block;font-weight:700;font-size:15px;margin:0 0 6px}
+.form-card .opt{font-weight:400;color:#555}
+.form-card input,.form-card textarea{display:block;width:100%;box-sizing:border-box;font:inherit;font-size:17px;padding:12px;border:2px solid #000;border-radius:0;background:#fff;color:#000;margin:0 0 16px}
+.form-card textarea{min-height:96px;resize:vertical}
+.form-card input:focus,.form-card textarea:focus{outline:3px solid #000;outline-offset:2px}
+.form-card button{display:flex;align-items:center;justify-content:center;width:100%;min-height:56px;border:2px solid #000;background:#000;color:#fff;font:700 18px "Space Grotesk",sans-serif;cursor:pointer}
+.form-card button:hover{background:#333}
+.form-card .row2{display:grid;grid-template-columns:1fr 1fr;gap:0 14px}
+@media (max-width:520px){.form-card .row2{grid-template-columns:1fr}.form-card{padding:24px}}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+
+/* reveal on scroll (only when JS + IntersectionObserver are available) */
+.js .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+.js .reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.js .reveal{opacity:1;transform:none;transition:none}}
+@media print{.js .reveal{opacity:1;transform:none}}
+
+/* phone call bar */
+.callbar{display:none}
+@media (max-width:700px){
+  body{padding-bottom:76px}
+  .callbar{display:flex;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:50;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:#fff;border-top:2px solid #000}
+  .callbar a{flex:1;display:flex;align-items:center;justify-content:center;min-height:52px;font:700 16px "Space Grotesk",sans-serif;text-decoration:none;border:2px solid #000}
+  .callbar .c1{background:#000;color:#fff}
+  .callbar .c2{background:#fff;color:#000}
+}
 </style>
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 <div style="font-family: 'Space Grotesk', system-ui, sans-serif; color: #000000; background: #ffffff; min-height: 100vh">
 
 <header style="border-bottom: 2px solid #000000">
-<nav style="max-width: 1120px; margin: 0 auto; padding: 20px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
+<nav aria-label="Main" style="max-width: 1120px; margin: 0 auto; padding: 20px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
 <a href="#top" style="display: inline-flex; align-items: center; gap: 10px; font-weight: 700; font-size: 22px; letter-spacing: -0.02em; text-decoration: none; color: #000000"><img src="logo-mark.png" alt="" width="32" height="35" style="display: block; height: 35px; width: auto"><span>DEMNY<span style="font-weight: 400">/web</span></span></a>
-<div style="display: flex; flex-wrap: wrap; gap: 24px; font-family: 'IBM Plex Mono', monospace; font-size: 14px">
+<div style="display: flex; flex-wrap: wrap; gap: 8px 24px; font-family: 'IBM Plex Mono', monospace; font-size: 14px">
 <a href="#services" style="text-decoration: none">Services</a>
+<a href="#work" style="text-decoration: none">Work</a>
 <a href="#demo" style="text-decoration: none">Demo</a>
 <a href="#pricing" style="text-decoration: none">Pricing</a>
 <a href="#faq" style="text-decoration: none">FAQ</a>
@@ -51,28 +104,29 @@ html{scroll-behavior:smooth}
 </nav>
 </header>
 
+<main id="main">
 <section id="top" style="max-width: 1120px; margin: 0 auto; padding: 96px 24px 80px">
 <p style="margin: 0 0 20px; font-family: 'IBM Plex Mono', monospace; font-size: 14px; text-transform: uppercase; letter-spacing: 0.08em">New websites</p>
 <h1 style="margin: 0; font-size: clamp(44px, 8vw, 96px); line-height: 0.95; letter-spacing: -0.04em; font-weight: 700; max-width: 900px">Need a new website? I'll build it.</h1>
 <p style="margin: 32px 0 0; font-size: 20px; line-height: 1.5; max-width: 600px">I'm Carson Demny. I build clean, fast, mobile-friendly websites and keep them running — all for one simple monthly price.</p>
 <div style="margin-top: 40px; display: flex; flex-wrap: wrap; gap: 16px">
-<a href="#contact" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; background: #000000; color: #ffffff; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #000000">Start your website</a>
-<a href="#pricing" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; background: #ffffff; color: #000000; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #000000">See pricing</a>
+<a href="#contact" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; background: #000000; color: #ffffff; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #000000">Get a free website check</a>
+<a href="#work" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; background: #ffffff; color: #000000; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #000000">See a sample site</a>
 </div>
 </section>
 
 <section id="services" style="background: #000000; color: #ffffff">
 <div style="max-width: 1120px; margin: 0 auto; padding: 88px 24px">
-<p style="margin: 0 0 12px; font-family: 'IBM Plex Mono', monospace; font-size: 14px; text-transform: uppercase; letter-spacing: 0.08em; color: #ffffff">01 — What I do</p>
-<h2 style="margin: 0 0 48px; font-size: clamp(32px, 5vw, 56px); letter-spacing: -0.03em; line-height: 1">Simple sites that work.</h2>
-<div style="display: flex; flex-wrap: wrap; gap: 2px; background: #ffffff; border: 2px solid #ffffff">
+<p class="reveal" style="margin: 0 0 12px; font-family: 'IBM Plex Mono', monospace; font-size: 14px; text-transform: uppercase; letter-spacing: 0.08em; color: #ffffff">01 — What I do</p>
+<h2 class="reveal" style="margin: 0 0 48px; font-size: clamp(32px, 5vw, 56px); letter-spacing: -0.03em; line-height: 1">Simple sites that work.</h2>
+<div class="reveal" style="display: flex; flex-wrap: wrap; gap: 2px; background: #ffffff; border: 2px solid #ffffff">
 <div style="flex: 1 1 300px; background: #000000; padding: 32px">
 <h3 style="margin: 0 0 12px; font-size: 24px">Brand-new websites</h3>
 <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #ffffff">A custom site built from scratch around what your business does and what your customers need.</p>
 </div>
 <div style="flex: 1 1 300px; background: #000000; padding: 32px">
-<h3 style="margin: 0 0 12px; font-size: 24px">Made for phones</h3>
-<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #ffffff">Fast and easy to use on any screen, with call and contact buttons that actually work.</p>
+<h3 style="margin: 0 0 12px; font-size: 24px">A page for every service</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #ffffff">Each service and city gets its own page and its own contact form, so more people find you and you know what every lead wants.</p>
 </div>
 <div style="flex: 1 1 300px; background: #000000; padding: 32px">
 <h3 style="margin: 0 0 12px; font-size: 24px">Get found locally</h3>
@@ -82,29 +136,53 @@ html{scroll-behavior:smooth}
 </div>
 </section>
 
-<section id="demo" style="max-width: 1120px; margin: 0 auto; padding: 88px 24px">
-<p style="margin: 0 0 12px; font-family: 'IBM Plex Mono', monospace; font-size: 14px; text-transform: uppercase; letter-spacing: 0.08em">02 — Demo</p>
-<h2 style="margin: 0 0 16px; font-size: clamp(32px, 5vw, 56px); letter-spacing: -0.03em; line-height: 1">See how it works.</h2>
-<p style="margin: 0 0 32px; font-size: 18px; line-height: 1.6; max-width: 640px">A 1-minute walkthrough of a multi-page website for a made-up plumbing company: a page for every service and city, a contact form on each, and how SEO, AEO and GEO get it found.</p>
-<video class="vid-wide" controls playsinline preload="metadata" poster="demo-poster.jpg" aria-label="Demo video: how a multi-page website with SEO, AEO and GEO brings in customers">
+<section id="work" style="max-width: 1120px; margin: 0 auto; padding: 88px 24px">
+<p class="reveal" style="margin: 0 0 12px; font-family: 'IBM Plex Mono', monospace; font-size: 14px; text-transform: uppercase; letter-spacing: 0.08em">02 — Sample site</p>
+<h2 class="reveal" style="margin: 0 0 16px; font-size: clamp(32px, 5vw, 56px); letter-spacing: -0.03em; line-height: 1">Before and after.</h2>
+<p class="reveal" style="margin: 0 0 32px; font-size: 18px; line-height: 1.6; max-width: 680px">Drag the slider. On the left, the kind of outdated site a lot of local businesses still have. On the right, the new site I built for Cedar Creek Plumbing, a made-up company I use as a sample.</p>
+<div class="ba reveal" id="ba">
+<picture><source type="image/webp" srcset="img/after.webp"><img src="img/after.jpg" width="1200" height="750" loading="lazy" decoding="async" alt="New Cedar Creek Plumbing homepage: clean layout, call button, quote form and service list"></picture>
+<div class="ba-before"><picture><source type="image/webp" srcset="img/before.webp"><img src="img/before.jpg" width="1200" height="750" loading="lazy" decoding="async" alt="Outdated example website: cluttered layout, scrolling banner, under-construction notice and no contact form"></picture></div>
+<input class="ba-range" type="range" min="0" max="100" value="50" aria-label="Compare the old and new website. Move left or right.">
+<div class="ba-line" aria-hidden="true"><span class="ba-knob">&harr;</span></div>
+<span class="ba-tag l" aria-hidden="true">Before</span><span class="ba-tag r" aria-hidden="true">After</span>
+</div>
+<div class="reveal" style="display: flex; flex-wrap: wrap; gap: 2px; margin-top: 32px; background: #000; border: 2px solid #000">
+<div style="flex: 1 1 200px; background: #fff; padding: 24px"><div style="font-size: 44px; font-weight: 700; letter-spacing: -0.03em">11</div><p style="margin: 4px 0 0; font-size: 16px">pages: one for each service and city, plus FAQ and contact</p></div>
+<div style="flex: 1 1 200px; background: #fff; padding: 24px"><div style="font-size: 44px; font-weight: 700; letter-spacing: -0.03em">11</div><p style="margin: 4px 0 0; font-size: 16px">separate contact forms, each labeled by the page it's on</p></div>
+<div style="flex: 1 1 200px; background: #fff; padding: 24px"><div style="font-size: 44px; font-weight: 700; letter-spacing: -0.03em">3</div><p style="margin: 4px 0 0; font-size: 16px">city pages written with real local details, not copy-paste</p></div>
+</div>
+<div class="reveal" style="margin-top: 32px; display: flex; flex-wrap: wrap; gap: 16px; align-items: center">
+<a href="/sample/cedar-creek/" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; background: #000000; color: #ffffff; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #000000">Click through the sample site &rarr;</a>
+<span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px">Cedar Creek Plumbing is not a real business.</span>
+</div>
+</section>
+
+<section id="demo" style="border-top: 2px solid #000000">
+<div style="max-width: 1120px; margin: 0 auto; padding: 88px 24px">
+<p class="reveal" style="margin: 0 0 12px; font-family: 'IBM Plex Mono', monospace; font-size: 14px; text-transform: uppercase; letter-spacing: 0.08em">03 — Demo</p>
+<h2 class="reveal" style="margin: 0 0 16px; font-size: clamp(32px, 5vw, 56px); letter-spacing: -0.03em; line-height: 1">See how it works.</h2>
+<p class="reveal" style="margin: 0 0 32px; font-size: 18px; line-height: 1.6; max-width: 640px">A 1-minute walkthrough of how a multi-page website brings in customers: a page for every service and city, a contact form on each, and how SEO, AEO and GEO get it found.</p>
+<video class="vid-wide" controls playsinline preload="none" data-poster="demo-poster.jpg" aria-label="Demo video: how a multi-page website with SEO, AEO and GEO brings in customers">
 <source src="demny-demo.mp4" type="video/mp4">
 Your browser can't play this video. <a href="demny-demo.mp4">Download it here.</a>
 </video>
-<video class="vid-tall" controls playsinline preload="none" poster="demo-poster-phone.jpg" aria-label="Demo video: how a multi-page website with SEO, AEO and GEO brings in customers">
+<video class="vid-tall" controls playsinline preload="none" data-poster="demo-poster-phone.jpg" aria-label="Demo video: how a multi-page website with SEO, AEO and GEO brings in customers">
 <source src="demny-demo-phone.mp4" type="video/mp4">
 Your browser can't play this video. <a href="demny-demo-phone.mp4">Download it here.</a>
 </video>
+</div>
 </section>
 
-<section style="border-bottom: 2px solid #000000">
+<section style="border-top: 2px solid #000000; border-bottom: 2px solid #000000">
 <div style="max-width: 1120px; margin: 0 auto; padding: 88px 24px">
-<p style="margin: 0 0 12px; font-family: 'IBM Plex Mono', monospace; font-size: 14px; text-transform: uppercase; letter-spacing: 0.08em">03 — How it works</p>
-<h2 style="margin: 0 0 48px; font-size: clamp(32px, 5vw, 56px); letter-spacing: -0.03em; line-height: 1">Three steps. No hassle.</h2>
-<div style="display: flex; flex-wrap: wrap; gap: 40px">
+<p class="reveal" style="margin: 0 0 12px; font-family: 'IBM Plex Mono', monospace; font-size: 14px; text-transform: uppercase; letter-spacing: 0.08em">04 — How it works</p>
+<h2 class="reveal" style="margin: 0 0 48px; font-size: clamp(32px, 5vw, 56px); letter-spacing: -0.03em; line-height: 1">Three steps. No hassle.</h2>
+<div class="reveal" style="display: flex; flex-wrap: wrap; gap: 40px">
 <div style="flex: 1 1 260px">
 <div style="font-family: 'IBM Plex Mono', monospace; font-size: 48px; font-weight: 500">1</div>
 <h3 style="margin: 8px 0; font-size: 22px">Tell me what you need</h3>
-<p style="margin: 0; font-size: 16px; line-height: 1.6">Call or email me about your business and what you want your site to do.</p>
+<p style="margin: 0; font-size: 16px; line-height: 1.6">Call, email or send the free website check form. Tell me about your business and what you want your site to do.</p>
 </div>
 <div style="flex: 1 1 260px">
 <div style="font-family: 'IBM Plex Mono', monospace; font-size: 48px; font-weight: 500">2</div>
@@ -121,9 +199,9 @@ Your browser can't play this video. <a href="demny-demo-phone.mp4">Download it h
 </section>
 
 <section id="pricing" style="max-width: 1120px; margin: 0 auto; padding: 88px 24px">
-<p style="margin: 0 0 12px; font-family: 'IBM Plex Mono', monospace; font-size: 14px; text-transform: uppercase; letter-spacing: 0.08em">04 — Pricing</p>
-<h2 style="margin: 0 0 48px; font-size: clamp(32px, 5vw, 56px); letter-spacing: -0.03em; line-height: 1">One simple price.</h2>
-<div style="max-width: 560px; border: 2px solid #000000; background: #000000; color: #ffffff; padding: 40px; box-sizing: border-box">
+<p class="reveal" style="margin: 0 0 12px; font-family: 'IBM Plex Mono', monospace; font-size: 14px; text-transform: uppercase; letter-spacing: 0.08em">05 — Pricing</p>
+<h2 class="reveal" style="margin: 0 0 48px; font-size: clamp(32px, 5vw, 56px); letter-spacing: -0.03em; line-height: 1">One simple price.</h2>
+<div class="reveal" style="max-width: 560px; border: 2px solid #000000; background: #000000; color: #ffffff; padding: 40px; box-sizing: border-box">
 <h3 style="margin: 0 0 16px; font-size: 22px">Website plan</h3>
 <div style="display: flex; align-items: baseline; gap: 8px"><span style="font-size: 72px; font-weight: 700; letter-spacing: -0.03em">$150</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 16px">/ month</span></div>
 <ul style="margin: 24px 0 32px; padding: 0 0 0 18px; font-size: 17px; line-height: 1.9">
@@ -138,8 +216,8 @@ Your browser can't play this video. <a href="demny-demo-phone.mp4">Download it h
 </section>
 
 <section id="faq" style="max-width: 1120px; margin: 0 auto; padding: 0 24px 88px">
-<p style="margin: 0 0 12px; font-family: 'IBM Plex Mono', monospace; font-size: 14px; text-transform: uppercase; letter-spacing: 0.08em">05 — FAQ</p>
-<h2 style="margin: 0 0 32px; font-size: clamp(32px, 5vw, 56px); letter-spacing: -0.03em; line-height: 1">Common questions.</h2>
+<p class="reveal" style="margin: 0 0 12px; font-family: 'IBM Plex Mono', monospace; font-size: 14px; text-transform: uppercase; letter-spacing: 0.08em">06 — FAQ</p>
+<h2 class="reveal" style="margin: 0 0 32px; font-size: clamp(32px, 5vw, 56px); letter-spacing: -0.03em; line-height: 1">Common questions.</h2>
 <div style="border-top: 2px solid #000000; padding: 24px 0">
 <h3 style="margin: 0 0 8px; font-size: 20px">How much does a website cost?</h3>
 <p style="margin: 0; font-size: 16px; line-height: 1.6; max-width: 720px">One simple price: $150 per month. That covers a custom new website, mobile-friendly design, local SEO and AI search setup, ongoing updates and fixes, and a monthly report.</p>
@@ -163,25 +241,61 @@ Your browser can't play this video. <a href="demny-demo-phone.mp4">Download it h
 </section>
 
 <section id="contact" style="background: #000000; color: #ffffff">
-<div style="max-width: 1120px; margin: 0 auto; padding: 96px 24px; display: flex; flex-wrap: wrap; gap: 48px; align-items: flex-end; justify-content: space-between">
-<div style="flex: 1 1 480px">
-<h2 style="margin: 0; font-size: clamp(36px, 6vw, 72px); letter-spacing: -0.04em; line-height: 0.95">Ready for a new site?</h2>
-<p style="margin: 24px 0 0; font-size: 18px; line-height: 1.6; max-width: 480px">Reach out to Carson Demny and tell me about your business. I'll get back to you quickly.</p>
+<div style="max-width: 1120px; margin: 0 auto; padding: 96px 24px; display: flex; flex-wrap: wrap; gap: 48px; align-items: flex-start; justify-content: space-between">
+<div class="reveal" style="flex: 1 1 420px">
+<p style="margin: 0 0 12px; font-family: 'IBM Plex Mono', monospace; font-size: 14px; text-transform: uppercase; letter-spacing: 0.08em">Free website check</p>
+<h2 style="margin: 0; font-size: clamp(36px, 6vw, 72px); letter-spacing: -0.04em; line-height: 0.95">Is your website costing you customers?</h2>
+<p style="margin: 24px 0 0; font-size: 18px; line-height: 1.6; max-width: 480px">Send me your website (or tell me you don't have one). I'll look it over for free and send you a short report: what's working, what's not, and what I'd change. No pressure to sign up.</p>
+<div style="margin-top: 32px; display: flex; flex-direction: column; gap: 12px; max-width: 360px">
+<a href="tel:+18327453523" style="display: inline-flex; align-items: center; justify-content: center; min-height: 56px; padding: 0 28px; background: #000000; color: #ffffff; text-decoration: none; font-weight: 700; font-size: 18px; border: 2px solid #ffffff">Call (832) 745-3523</a>
+<a href="mailto:carsondemny@gmail.com" style="display: inline-flex; align-items: center; justify-content: center; min-height: 56px; padding: 0 28px; background: #000000; color: #ffffff; text-decoration: none; font-weight: 700; font-size: 18px; border: 2px solid #ffffff">Email carsondemny@gmail.com</a>
 </div>
-<div style="flex: 0 1 360px; display: flex; flex-direction: column; gap: 12px; font-family: 'IBM Plex Mono', monospace; font-size: 16px">
-<a href="mailto:carsondemny@gmail.com" style="display: inline-flex; align-items: center; justify-content: center; min-height: 56px; padding: 0 28px; background: #ffffff; color: #000000; text-decoration: none; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 18px">Email me</a>
-<a href="tel:+18327453523" style="display: inline-flex; align-items: center; justify-content: center; min-height: 56px; padding: 0 28px; background: #000000; color: #ffffff; text-decoration: none; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 18px; border: 2px solid #ffffff">Call (832) 745-3523</a>
-<a href="mailto:carsondemny@gmail.com" style="color: #ffffff">carsondemny@gmail.com</a>
 </div>
+<form id="check" class="form-card reveal" action="https://formsubmit.co/carsondemny@gmail.com" method="POST" style="flex: 1 1 420px; max-width: 520px">
+<h3 style="margin: 0 0 6px; font-size: 26px; letter-spacing: -0.02em">Get my free website check</h3>
+<p style="margin: 0 0 22px; font-size: 15px; color: #444">Takes 30 seconds. I usually reply within a day.</p>
+<input type="hidden" name="_subject" value="New free website check request">
+<input type="hidden" name="_next" value="https://demnycarson.github.io/thanks.html">
+<input type="hidden" name="_template" value="table">
+<p class="hp"><label>Leave this empty <input type="text" name="_honey" tabindex="-1" autocomplete="off"></label></p>
+<div class="row2">
+<div><label for="c-name">Your name</label><input id="c-name" name="name" type="text" autocomplete="name" required></div>
+<div><label for="c-biz">Business name</label><input id="c-biz" name="business" type="text" autocomplete="organization" required></div>
+</div>
+<label for="c-site">Current website <span class="opt">(or "none")</span></label>
+<input id="c-site" name="website" type="text" inputmode="url" placeholder="yourbusiness.com" required>
+<div class="row2">
+<div><label for="c-email">Email</label><input id="c-email" name="email" type="email" autocomplete="email" required></div>
+<div><label for="c-phone">Phone <span class="opt">(optional)</span></label><input id="c-phone" name="phone" type="tel" autocomplete="tel"></div>
+</div>
+<label for="c-msg">Anything I should know? <span class="opt">(optional)</span></label>
+<textarea id="c-msg" name="message" placeholder="What your business does, what you want more of..."></textarea>
+<button type="submit">Send my free check request</button>
+</form>
 </div>
 <div style="border-top: 1px solid #ffffff">
 <div style="max-width: 1120px; margin: 0 auto; padding: 24px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; font-family: 'IBM Plex Mono', monospace; font-size: 13px">
 <span>© 2026 Demny Web Agency · Carson Demny</span>
-<span>Cypress, TX</span>
+<span><a href="/sample/cedar-creek/" style="color: #ffffff">Sample site</a> · Cypress, TX</span>
 </div>
 </div>
 </section>
+</main>
 
 </div>
+<div class="callbar"><a class="c1" href="tel:+18327453523">Call Carson</a><a class="c2" href="#contact">Free site check</a></div>
+<script>
+(function(){
+  var ba=document.getElementById("ba");
+  if(ba){var r=ba.querySelector(".ba-range");var set=function(){ba.style.setProperty("--pos",r.value+"%")};r.addEventListener("input",set);set();}
+  var vids=document.querySelectorAll("video[data-poster]");
+  var showPoster=function(v){if(!v.poster)v.poster=v.getAttribute("data-poster")};
+  if(!("IntersectionObserver" in window)){vids.forEach(showPoster);return;}
+  var vio=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){showPoster(e.target);vio.unobserve(e.target);}})},{rootMargin:"600px 0px"});
+  vids.forEach(function(v){vio.observe(v)});
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);}})},{rootMargin:"0px 0px -8% 0px"});
+  document.querySelectorAll(".reveal").forEach(function(el){io.observe(el)});
+})();
+</script>
 </body>
 </html>
