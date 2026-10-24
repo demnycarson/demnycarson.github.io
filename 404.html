@@ -21,15 +21,17 @@ p{font-size:19px;line-height:1.6;margin:20px 0 0;max-width:520px}
 .links a:first-child{background:#000;color:#fff}
 :focus-visible{outline:3px solid #000;outline-offset:3px}
 </style>
-<!-- Meta Pixel -->
+<!-- Meta Pixel (deferred: loads on first interaction or 4s after page load, so it doesn't slow the first paint) -->
 <script>
+!function(f,b){var done=0;function go(){if(done)return;done=1;
+["scroll","pointerdown","keydown","touchstart","mousemove"].forEach(function(ev){f.removeEventListener(ev,go,{passive:true})});
 !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
 n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
-document,'script','https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '2169218107277269');
-fbq('track', 'PageView');
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(f,b,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','2169218107277269');fbq('track','PageView');}
+["scroll","pointerdown","keydown","touchstart","mousemove"].forEach(function(ev){f.addEventListener(ev,go,{passive:true,once:true})});
+f.addEventListener("load",function(){setTimeout(go,4000)});}(window,document);
 </script>
 <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=2169218107277269&ev=PageView&noscript=1"/></noscript>
 <!-- End Meta Pixel -->

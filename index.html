@@ -210,15 +210,17 @@ html{scroll-behavior:smooth}
   .callbar .c2{background:#fff;color:#000}
 }
 </style>
-<!-- Meta Pixel -->
+<!-- Meta Pixel (deferred: loads on first interaction or 4s after page load, so it doesn't slow the first paint) -->
 <script>
+!function(f,b){var done=0;function go(){if(done)return;done=1;
+["scroll","pointerdown","keydown","touchstart","mousemove"].forEach(function(ev){f.removeEventListener(ev,go,{passive:true})});
 !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
 n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
-document,'script','https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '2169218107277269');
-fbq('track', 'PageView');
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(f,b,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','2169218107277269');fbq('track','PageView');}
+["scroll","pointerdown","keydown","touchstart","mousemove"].forEach(function(ev){f.addEventListener(ev,go,{passive:true,once:true})});
+f.addEventListener("load",function(){setTimeout(go,4000)});}(window,document);
 </script>
 <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=2169218107277269&ev=PageView&noscript=1"/></noscript>
 <!-- End Meta Pixel -->
@@ -267,7 +269,7 @@ fbq('track', 'PageView');
 
 <section class="partner" aria-label="Our partner">
 <div class="partner-in reveal">
-<div class="partner-l"><span class="partner-k">In partnership with</span><picture><source type="image/webp" srcset="img/apb-logo.webp"><img src="img/apb-logo.png" width="748" height="172" alt="APB Systems" loading="lazy" decoding="async" class="apb-img"></picture></div>
+<div class="partner-l"><span class="partner-k">In partnership with</span><picture><source type="image/webp" srcset="img/apb-logo.webp"><img src="img/apb-logo.png" width="640" height="147" alt="APB Systems" loading="lazy" decoding="async" class="apb-img"></picture></div>
 <div class="partner-r"><p class="partner-h">Get found. Get chosen.<br>Get more customers.</p><p class="partner-p">Demny Web Agency and APB Systems work together to help local businesses dominate Google, collect more reviews, and turn online searches into real customers.</p></div>
 </div>
 </section>
@@ -414,7 +416,7 @@ Your browser can't play this video. <a href="demny-demo-phone.mp4">Download it h
 <h2 style="margin: 0 0 24px; font-size: clamp(32px, 5vw, 56px); letter-spacing: -0.03em; line-height: 1">Hi, I'm Carson.</h2>
 <p style="margin: 0 0 16px; font-size: 18px; line-height: 1.6; max-width: 600px">I split my time between Cypress and Waco, Texas, and I started Demny Web Agency to help small businesses get found online and get more calls.</p>
 <p style="margin: 0 0 16px; font-size: 18px; line-height: 1.6; max-width: 600px">You work with me directly. I'm your one point of contact: I answer your calls and texts, I know your business, and I keep you updated every month.</p>
-<div style="border-left: 4px solid #000000; padding-left: 16px; margin: 0 0 28px; max-width: 600px"><picture><source type="image/webp" srcset="img/apb-logo.webp"><img src="img/apb-logo.png" width="748" height="172" alt="APB Systems" loading="lazy" decoding="async" class="apb-about"></picture>
+<div style="border-left: 4px solid #000000; padding-left: 16px; margin: 0 0 28px; max-width: 600px"><picture><source type="image/webp" srcset="img/apb-logo.webp"><img src="img/apb-logo.png" width="640" height="147" alt="APB Systems" loading="lazy" decoding="async" class="apb-about"></picture>
 <p style="margin: 0; font-size: 18px; line-height: 1.6">Behind me is my partner, <b>APB Systems</b>. Together we handle your website, your Google Business Profile, your reviews and bringing in new customers. You get a full team doing the work, with one person you can always reach.</p></div>
 <a class="btn-dark btn" href="#contact" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; background: #000000; color: #ffffff; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #000000">Talk to Carson</a>
 </div>
@@ -582,7 +584,7 @@ Your browser can't play this video. <a href="demny-demo-phone.mp4">Download it h
 <a href="#top" class="ft-logo"><img src="logo-mark.png" alt="" width="32" height="35"><span>DEMNY<span style="font-weight:400">/web</span></span></a>
 <p>New websites, SEO and Google Business Profile work for small businesses across the U.S. One simple monthly price.</p>
 <a class="ft-cta" href="#contact">Get a free website check &rarr;</a>
-<div><div class="ft-partner"><span>Partner</span><img src="img/apb-logo.png" alt="APB Systems" width="113" height="26" loading="lazy"></div></div>
+<div><div class="ft-partner"><span>Partner</span><picture><source type="image/webp" srcset="img/apb-logo.webp"><img src="img/apb-logo.png" alt="APB Systems" width="113" height="26" loading="lazy"></picture></div></div>
 </div>
 <nav class="ft-col" aria-label="Footer: services">
 <h3>Services</h3>
