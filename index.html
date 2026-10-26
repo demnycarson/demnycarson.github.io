@@ -169,6 +169,18 @@ html{scroll-behavior:smooth}
 .climb-rank{font-size:clamp(56px,7vw,88px);font-weight:700;letter-spacing:-.04em;line-height:1;margin:20px 0 16px}
 .climb-top{background:#000;color:#fff}
 @media (max-width:820px){.climb{grid-template-columns:1fr}.climb-step:nth-child(n){min-height:0}}
+/* who I help */
+.who{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.who-c{border:2px solid #000;padding:28px;background:#fff}
+.who-c h3{margin:0 0 10px;font-size:24px;letter-spacing:-.02em}
+.who-c p{margin:0 0 16px;font-size:16px;line-height:1.6}
+.who-c ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.who-c li{font:500 12px/1 "IBM Plex Mono",monospace;text-transform:uppercase;letter-spacing:.06em;border:2px solid #000;padding:7px 9px}
+.areas-band{margin-top:32px;display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px}
+.areas-k{font:500 13px/1 "IBM Plex Mono",monospace;text-transform:uppercase;letter-spacing:.08em}
+.areas-band a{font-weight:700;font-size:17px;text-decoration:none;border:2px solid #000;padding:10px 14px;transition:background-color .15s,color .15s}
+@media (hover:hover){.areas-band a:hover{background:#000;color:#fff}}
+@media (max-width:820px){.who{grid-template-columns:1fr}}
 /* partner */
 .partner{border-top:2px solid #000;border-bottom:2px solid #000;background:#fff}
 .partner-in{max-width:1120px;margin:0 auto;padding:40px 24px;display:flex;flex-wrap:wrap;align-items:center;gap:32px 56px}
@@ -204,7 +216,7 @@ html{scroll-behavior:smooth}
 .callbar{display:none}
 @media (max-width:700px){
   body{padding-bottom:76px}
-  .callbar{display:flex;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:50;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:#fff;border-top:2px solid #000}
+  .callbar{display:flex;gap:8px;position:fixed;left:0;right:0;bottom:0;z-index:50;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:#fff;border-top:2px solid #000}
   .callbar a{flex:1;display:flex;align-items:center;justify-content:center;min-height:52px;font:700 16px "Space Grotesk",sans-serif;text-decoration:none;border:2px solid #000}
   .callbar .c1{background:#000;color:#fff}
   .callbar .c2{background:#fff;color:#000}
@@ -236,6 +248,7 @@ f.addEventListener("load",function(){setTimeout(go,4000)});}(window,document);
 <div style="display: flex; flex-wrap: wrap; gap: 8px 24px; font-family: 'IBM Plex Mono', monospace; font-size: 14px">
 <a class="nav" href="#services" style="text-decoration: none">Services</a>
 <a class="nav" href="#rankings" style="text-decoration: none">Rankings</a>
+<a class="nav" href="#who" style="text-decoration: none">Who I help</a>
 <a class="nav" href="#work" style="text-decoration: none">Work</a>
 <a class="nav" href="#demo" style="text-decoration: none">Demo</a>
 <a class="nav" href="#about" style="text-decoration: none">About</a>
@@ -339,6 +352,23 @@ f.addEventListener("load",function(){setTimeout(go,4000)});}(window,document);
 </div>
 <p class="reveal" style="margin: 24px 0 0; font-family: 'IBM Plex Mono', monospace; font-size: 13px; line-height: 1.6; max-width: 720px; color: #444">Rankings usually build over a few months and depend on your location and competition. No one can honestly guarantee a spot, but this is the plan every client gets.</p>
 <div class="reveal" style="margin-top: 40px; display: flex; flex-wrap: wrap; gap: 16px; align-items: center"><a class="btn-dark btn" href="#contact" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #000000; background: #000000; color: #ffffff">See where you rank now</a><a class="btn-light btn" href="#pricing" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #000000; background: #ffffff; color: #000000">See pricing</a></div>
+</div>
+</section>
+
+<section id="who" style="border-bottom: 2px solid #000000">
+<div style="max-width: 1120px; margin: 0 auto; padding: 88px 24px">
+<p class="reveal" style="margin: 0 0 12px; font-family: 'IBM Plex Mono', monospace; font-size: 14px; text-transform: uppercase; letter-spacing: 0.08em">Who I help</p>
+<h2 class="reveal" style="margin: 0 0 48px; font-size: clamp(32px, 5vw, 56px); letter-spacing: -0.03em; line-height: 1">Built for local businesses.</h2>
+<div class="reveal stagger who">
+<div class="who-c lift"><h3>Home services</h3><p>The calls come from Google Maps. I get you on it and near the top.</p><ul><li>Plumbers</li><li>HVAC</li><li>Roofers</li><li>Electricians</li><li>Landscapers</li><li>Cleaners</li></ul></div>
+<div class="who-c lift"><h3>Beauty &amp; fitness</h3><p>People pick by reviews and photos. I make yours the obvious choice.</p><ul><li>Barbershops</li><li>Salons</li><li>Nail &amp; lash studios</li><li>Gyms</li><li>Personal trainers</li><li>Med spas</li></ul></div>
+<div class="who-c lift"><h3>Professional services</h3><p>Trust is everything. A sharp site and strong reviews win the client.</p><ul><li>Realtors</li><li>Lawyers</li><li>Accountants</li><li>Insurance agents</li><li>Financial advisors</li><li>Consultants</li></ul></div>
+</div>
+<div class="reveal areas-band">
+<span class="areas-k">Local in</span>
+<a href="/cypress-tx/">Cypress, TX &rarr;</a><a href="/waco-tx/">Waco, TX &rarr;</a><a href="/houston-tx/">Houston, TX &rarr;</a>
+<span class="areas-k">&middot; and working with businesses nationwide</span>
+</div>
 </div>
 </section>
 
@@ -540,7 +570,7 @@ Your browser can't play this video. <a href="demny-demo-phone.mp4">Download it h
 <h3 style="margin: 0 0 8px; font-size: 20px">How do I get started?</h3>
 <p style="margin: 0; font-size: 16px; line-height: 1.6; max-width: 720px">Email carsondemny@gmail.com or call (832) 745-3523 and tell me about your business. I'll get back to you quickly.</p>
 </div>
-<div class="reveal" style="margin-top: 40px; display: flex; flex-wrap: wrap; gap: 16px; align-items: center"><span style="font-size: 18px; font-weight: 700">Still have a question?</span><a class="btn-dark btn" href="#contact" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #000000; background: #000000; color: #ffffff">Ask me directly</a><a class="btn-light btn" href="tel:+18327453523" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #000000; background: #ffffff; color: #000000">Call (832) 745-3523</a></div>
+<div class="reveal" style="margin-top: 40px; display: flex; flex-wrap: wrap; gap: 16px; align-items: center"><span style="font-size: 18px; font-weight: 700">Still have a question?</span><a class="btn-dark btn" href="#contact" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #000000; background: #000000; color: #ffffff">Ask me directly</a><a class="btn-light btn" href="tel:+18327453523" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #000000; background: #ffffff; color: #000000">Call (832) 745-3523</a><a class="btn-light btn" href="sms:+18327453523?&amp;body=Hi%20Carson%2C%20I%27m%20interested%20in%20a%20free%20website%20check." style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #000000; background: #ffffff; color: #000000">Text me</a></div>
 </section>
 
 <section id="contact" style="background: #000000; color: #ffffff">
@@ -551,6 +581,7 @@ Your browser can't play this video. <a href="demny-demo-phone.mp4">Download it h
 <p style="margin: 24px 0 0; font-size: 18px; line-height: 1.6; max-width: 480px">Send me your website (or tell me you don't have one). I'll look it over for free and send you a short report: what's working, what's not, and what I'd change. No pressure to sign up.</p>
 <div style="margin-top: 32px; display: flex; flex-direction: column; gap: 12px; max-width: 360px">
 <a class="btn-dark btn btn-w" href="tel:+18327453523" style="display: inline-flex; align-items: center; justify-content: center; min-height: 56px; padding: 0 28px; background: #000000; color: #ffffff; text-decoration: none; font-weight: 700; font-size: 18px; border: 2px solid #ffffff">Call (832) 745-3523</a>
+<a class="btn-dark btn btn-w" href="sms:+18327453523?&amp;body=Hi%20Carson%2C%20I%27m%20interested%20in%20a%20free%20website%20check." style="display: inline-flex; align-items: center; justify-content: center; min-height: 56px; padding: 0 28px; background: #000000; color: #ffffff; text-decoration: none; font-weight: 700; font-size: 18px; border: 2px solid #ffffff">Text (832) 745-3523</a>
 <a class="btn-dark btn btn-w" href="mailto:carsondemny@gmail.com" style="display: inline-flex; align-items: center; justify-content: center; min-height: 56px; padding: 0 28px; background: #000000; color: #ffffff; text-decoration: none; font-weight: 700; font-size: 18px; border: 2px solid #ffffff">Email carsondemny@gmail.com</a>
 </div>
 </div>
@@ -605,9 +636,13 @@ Your browser can't play this video. <a href="demny-demo-phone.mp4">Download it h
 </nav>
 <div class="ft-col">
 <h3>Contact</h3>
-<a href="tel:+18327453523">(832) 745-3523</a>
+<a href="tel:+18327453523">Call (832) 745-3523</a>
+<a href="sms:+18327453523?&amp;body=Hi%20Carson%2C%20I%27m%20interested%20in%20a%20free%20website%20check.">Text (832) 745-3523</a>
 <a href="mailto:carsondemny@gmail.com">carsondemny@gmail.com</a>
 <span>Based in Cypress &amp; Waco, TX</span>
+<a href="/cypress-tx/">Cypress, TX</a>
+<a href="/waco-tx/">Waco, TX</a>
+<a href="/houston-tx/">Houston, TX</a>
 <span>Serving clients nationwide</span>
 </div>
 </div>
@@ -620,7 +655,7 @@ Your browser can't play this video. <a href="demny-demo-phone.mp4">Download it h
 </footer>
 
 </div>
-<div class="callbar"><a class="c1" href="tel:+18327453523">Call Carson</a><a class="c2" href="#contact">Free site check</a></div>
+<div class="callbar"><a class="c1" href="tel:+18327453523">Call</a><a class="c2" href="sms:+18327453523?&amp;body=Hi%20Carson%2C%20I%27m%20interested%20in%20a%20free%20website%20check.">Text</a><a class="c2" href="#contact">Free check</a></div>
 <script>
 (function(){
   var ba=document.getElementById("ba");
