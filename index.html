@@ -212,6 +212,13 @@ mark{background:none;color:var(--hl);padding:0}
 .svc-detail li span{font-weight:400;font-size:16px;line-height:1.6;color:#ccc}
 .svc-detail li span b{color:#fff}
 @media (max-width:860px){.svc-detail{grid-template-columns:1fr!important}}
+/* visual pass */
+.gill{display:block;width:100%;height:auto;max-height:130px;margin:0 0 18px;background:#111;border:2px solid #333;padding:10px;box-sizing:border-box}
+.stats{background:var(--hl);color:#fff;border-bottom:2px solid #000}
+.stats-in{max-width:1120px;margin:0 auto;padding:44px 24px;display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
+.st b{display:block;font-size:clamp(44px,5.4vw,68px);font-weight:700;letter-spacing:-.04em;line-height:1}
+.st span{display:block;margin-top:10px;font-size:16px;line-height:1.4;color:#dfe6ff;max-width:220px}
+@media (max-width:820px){.stats-in{grid-template-columns:1fr 1fr;gap:28px 20px}}
 /* clean pass */
 .goal-inc{list-style:none;margin:16px 0 0;padding:14px 0 0;border-top:1px solid #444;display:grid;gap:8px}
 .goal-inc li{font-size:15px;font-weight:500;display:flex;gap:10px;align-items:baseline}
@@ -354,7 +361,7 @@ f.addEventListener("load",function(){setTimeout(go,4000)});}(window,document);
 <div class="hero-copy">
 <p style="margin: 0 0 20px; font-family: 'IBM Plex Mono', monospace; font-size: 14px; text-transform: uppercase; letter-spacing: 0.08em">Get found &middot; Get chosen &middot; Get more customers</p>
 <h1 style="margin: 0; font-size: clamp(40px, 5.4vw, 70px); line-height: 0.98; letter-spacing: -0.04em; font-weight: 700; max-width: 640px">Your competitors are in the top 3 on Google. <span class="hero-q">Why aren't you?</span></h1>
-<p style="margin: 32px 0 0; font-size: 20px; line-height: 1.5; max-width: 540px">I'm Carson Demny. With APB Systems, I build your website, help you show up on Google, and move you up Google Maps. All for one simple monthly price.</p>
+<p style="margin: 32px 0 0; font-size: 20px; line-height: 1.5; max-width: 540px">I build your website and move you up Google Maps, so more customers call you.</p>
 <div style="margin-top: 40px; display: flex; flex-wrap: wrap; gap: 16px">
 <a class="btn-dark btn" href="#contact" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; background: #000000; color: #ffffff; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #000000">Find out where you rank</a>
 <a class="btn-light btn" href="#work" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; background: #ffffff; color: #000000; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #000000">See a sample site</a>
@@ -375,7 +382,16 @@ f.addEventListener("load",function(){setTimeout(go,4000)});}(window,document);
 <section class="partner" aria-label="Our partner">
 <div class="partner-in reveal">
 <div class="partner-l"><span class="partner-k">In partnership with</span><picture><source type="image/webp" srcset="img/apb-logo.webp"><img src="img/apb-logo.png" width="640" height="147" alt="APB Systems" loading="lazy" decoding="async" class="apb-img"></picture></div>
-<div class="partner-r"><p class="partner-h">Get found. Get chosen.<br>Get more customers.</p><p class="partner-p">Demny Web Agency and APB Systems (owned by Valentino) work together to help local businesses show up first on Google, get more reviews, and turn people searching online into paying customers.</p></div>
+<div class="partner-r"><p class="partner-h">Get found. Get chosen.<br>Get more customers.</p><p class="partner-p">Demny Web Agency + APB Systems (owned by Valentino): more Google visibility, more reviews, more customers.</p></div>
+</div>
+</section>
+
+<section class="stats" aria-label="Quick facts">
+<div class="stats-in reveal stagger">
+<div class="st"><b>Top 3</b><span>spots on Google Maps that get most of the calls</span></div>
+<div class="st"><b>100</b><span>Google speed score for this website</span></div>
+<div class="st"><b>$0</b><span>setup fee. Cancel anytime</span></div>
+<div class="st"><b>24h</b><span>to get your free website check call</span></div>
 </div>
 </section>
 
@@ -383,27 +399,27 @@ f.addEventListener("load",function(){setTimeout(go,4000)});}(window,document);
 <div style="max-width: 1120px; margin: 0 auto; padding: 88px 24px">
 <p class="reveal kick" style="margin: 0 0 12px; font-family: 'IBM Plex Mono', monospace; font-size: 14px; text-transform: uppercase; letter-spacing: 0.08em; color: #ffffff">What I do</p>
 <h2 class="reveal" style="margin: 0 0 16px; font-size: clamp(32px, 5vw, 56px); letter-spacing: -0.03em; line-height: 1">Three goals. <mark>One plan.</mark></h2>
-<p class="reveal" style="margin: 0 0 48px; font-size: 18px; line-height: 1.6; max-width: 640px; color: #ffffff">Every client gets the same game plan, done with our partner APB Systems: a new site, built to rank, then a steady climb up Google.</p>
+<p class="reveal" style="margin: 0 0 48px; font-size: 18px; line-height: 1.6; max-width: 640px; color: #ffffff">Same plan for every client: build it, rank it, climb.</p>
 <div class="reveal stagger" style="display: flex; flex-wrap: wrap; gap: 2px; background: #ffffff; border: 2px solid #ffffff">
 <div class="card" style="flex: 1 1 300px; background: #000000; padding: 32px">
-<span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="13" rx="1"/><path d="M8 21h8M12 17v4"/></svg></span>
+<svg class="gill" viewBox="0 0 240 120" aria-hidden="true"><rect x="8" y="10" width="170" height="104" rx="4" fill="none" stroke="#fff" stroke-width="3"/><rect x="8" y="10" width="170" height="18" fill="#fff"/><circle cx="20" cy="19" r="3" fill="#000"/><circle cx="31" cy="19" r="3" fill="#000"/><circle cx="42" cy="19" r="3" fill="#000"/><rect x="22" y="40" width="90" height="10" fill="#5B8CFF"/><rect x="22" y="58" width="130" height="6" fill="#666"/><rect x="22" y="70" width="110" height="6" fill="#666"/><rect x="22" y="88" width="60" height="16" fill="#5B8CFF"/><rect x="190" y="38" width="44" height="78" rx="6" fill="#000" stroke="#fff" stroke-width="3"/><rect x="198" y="50" width="28" height="6" fill="#5B8CFF"/><rect x="198" y="62" width="28" height="4" fill="#666"/><rect x="198" y="70" width="22" height="4" fill="#666"/><rect x="198" y="96" width="28" height="10" fill="#5B8CFF"/></svg>
 <div style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; letter-spacing: 0.08em; margin: 0 0 20px">GOAL 01</div>
 <h3 style="margin: 0 0 12px; font-size: 26px">A brand-new website</h3>
-<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #ffffff">A fast, custom site built from scratch, with a page and a contact form for every service and city you cover, so every visitor has a clear way to call you.</p>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #ffffff">Fast, custom, built to get calls.</p>
 <ul class="goal-inc"><li>Website creation &amp; optimization</li><li>Phone-friendly, built to get calls</li></ul>
 </div>
 <div class="card" style="flex: 1 1 300px; background: #000000; padding: 32px">
-<span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-5-5"/></svg></span>
+<svg class="gill" viewBox="0 0 240 120" aria-hidden="true"><rect x="8" y="8" width="224" height="26" rx="13" fill="none" stroke="#fff" stroke-width="3"/><circle cx="26" cy="21" r="6" fill="none" stroke="#fff" stroke-width="3"/><path d="M30 25l6 6" stroke="#fff" stroke-width="3"/><rect x="44" y="17" width="110" height="8" fill="#888"/><rect x="8" y="44" width="224" height="22" fill="#0047EE"/><rect x="16" y="51" width="120" height="8" fill="#fff"/><text x="214" y="60" font-size="12" font-weight="700" fill="#fff" text-anchor="end" font-family="sans-serif">#1</text><rect x="8" y="72" width="224" height="18" fill="none" stroke="#555" stroke-width="2"/><rect x="16" y="78" width="100" height="6" fill="#666"/><rect x="8" y="96" width="224" height="18" fill="none" stroke="#555" stroke-width="2"/><rect x="16" y="102" width="80" height="6" fill="#666"/></svg>
 <div style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; letter-spacing: 0.08em; margin: 0 0 20px">GOAL 02</div>
 <h3 style="margin: 0 0 12px; font-size: 26px">SEO built in</h3>
-<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #ffffff">From day one, your site uses the right words and hidden details that Google and AI tools like ChatGPT look for, so you show up when people search.</p>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #ffffff">Show up when people search Google or AI.</p>
 <ul class="goal-inc"><li>Local SEO for &ldquo;near me&rdquo; searches</li><li>AI search (ChatGPT, Google AI)</li></ul>
 </div>
 <div class="card" style="flex: 1 1 300px; background: #000000; padding: 32px">
-<span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20h18"/><path d="M6 16v-4M11 16V9M16 16V5"/></svg></span>
+<svg class="gill" viewBox="0 0 240 120" aria-hidden="true"><path d="M10 112h222" stroke="#fff" stroke-width="3"/><rect x="22" y="84" width="30" height="28" fill="#555"/><rect x="68" y="66" width="30" height="46" fill="#777"/><rect x="114" y="46" width="30" height="66" fill="#999"/><rect x="160" y="18" width="30" height="94" fill="#0047EE"/><path d="M28 74 L82 56 L128 36 L170 10" fill="none" stroke="#5B8CFF" stroke-width="4"/><path d="M160 8 L176 8 L172 22" fill="none" stroke="#5B8CFF" stroke-width="4"/><text x="175" y="104" font-size="14" font-weight="700" fill="#fff" text-anchor="middle" font-family="sans-serif">#1</text></svg>
 <div style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; letter-spacing: 0.08em; margin: 0 0 20px">GOAL 03</div>
 <h3 style="margin: 0 0 12px; font-size: 26px">Climb the Google rankings</h3>
-<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #ffffff">Every month I update your Google Business Profile (your listing on Google Maps) with posts, photos and new reviews. The goal: move you from the top 10 to the top 3, then go after #1.</p>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #ffffff">Top 10 &rarr; top 3 &rarr; #1 on Google Maps.</p>
 <ul class="goal-inc"><li>Google Business Profile setup</li><li>Review growth system</li><li>Monthly posts, photos &amp; reports</li></ul>
 </div>
 </div>
@@ -415,25 +431,25 @@ f.addEventListener("load",function(){setTimeout(go,4000)});}(window,document);
 <div style="max-width: 1120px; margin: 0 auto; padding: 88px 24px">
 <p class="reveal kick" style="margin: 0 0 12px; font-family: 'IBM Plex Mono', monospace; font-size: 14px; text-transform: uppercase; letter-spacing: 0.08em">The Maps climb</p>
 <h2 class="reveal" style="margin: 0 0 16px; font-size: clamp(32px, 5vw, 56px); letter-spacing: -0.03em; line-height: 1">From buried to <mark>#1</mark> on Google Maps.</h2>
-<p class="reveal" style="margin: 0 0 48px; font-size: 18px; line-height: 1.6; max-width: 640px">When someone nearby searches for what you do, Google shows a map with just 3 businesses. Most people call one of those 3. My job is to get you there, step by step.</p>
+<p class="reveal" style="margin: 0 0 48px; font-size: 18px; line-height: 1.6; max-width: 640px">Google shows 3 businesses on the map. Most people call one of them.</p>
 <div class="reveal stagger climb">
 <div class="climb-step lift">
 <span class="climb-tag">Stage 1</span>
 <div class="climb-rank">Top 10</div>
 <h3>Get on the map</h3>
-<p>I set up and clean up your Google Business Profile, then link it to your new website, so Google knows exactly who you are, what you do and where you work.</p>
+<p>Profile set up and linked to your new site.</p>
 </div>
 <div class="climb-step lift">
 <span class="climb-tag">Stage 2</span>
 <div class="climb-rank">Top 3</div>
 <h3>Break into the top 3</h3>
-<p>Monthly posts, fresh photos, a page for every service and city, and a steady flow of new reviews push you into the 3 spots that get the calls.</p>
+<p>Posts, photos and new reviews every month.</p>
 </div>
 <div class="climb-step climb-top lift">
 <span class="climb-tag">Stage 3</span>
 <div class="climb-rank">#1</div>
 <h3>Own your town</h3>
-<p>Then we keep pushing for the top spot: the first business people see, and the first one they call.</p>
+<p>The first business people see and call.</p>
 </div>
 </div>
 <p class="reveal" style="margin: 24px 0 0; font-family: 'IBM Plex Mono', monospace; font-size: 13px; line-height: 1.6; max-width: 720px; color: #444">Rankings usually build over a few months and depend on your location and competition. No one can honestly guarantee a spot, but this is the plan every client gets.</p>
@@ -445,7 +461,7 @@ f.addEventListener("load",function(){setTimeout(go,4000)});}(window,document);
 <div style="max-width: 1120px; margin: 0 auto; padding: 88px 24px">
 <p class="reveal kick" style="margin: 0 0 12px; font-family: 'IBM Plex Mono', monospace; font-size: 14px; text-transform: uppercase; letter-spacing: 0.08em">Testimonials</p>
 <h2 class="reveal" style="margin: 0 0 16px; font-size: clamp(32px, 5vw, 56px); letter-spacing: -0.03em; line-height: 1">Real business owners. <mark>Real results.</mark></h2>
-<p class="reveal" style="margin: 0 0 40px; font-size: 18px; line-height: 1.6; max-width: 640px">Hear from business owners who've worked with our partner APB Systems and its owner, Valentino, about showing up on Google and getting more calls.</p>
+<p class="reveal" style="margin: 0 0 40px; font-size: 18px; line-height: 1.6; max-width: 640px">Business owners who worked with APB Systems and owner Valentino.</p>
 <div class="reveal testi-wrap"><video class="testi-vid" controls playsinline preload="none" data-poster="testimonials-poster.jpg" aria-label="Video testimonials from business owners who worked with APB Systems"><source src="testimonials.mp4" type="video/mp4">Your browser can't play this video. <a href="testimonials.mp4">Download it here.</a></video></div>
 <div class="reveal" style="margin-top: 40px; display: flex; flex-wrap: wrap; gap: 16px; align-items: center"><a class="btn-dark btn" href="#contact" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #000000; background: #000000; color: #ffffff">Get results like this</a><a class="btn-light btn" href="#pricing" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #000000; background: #ffffff; color: #000000">See pricing</a></div>
 </div>
@@ -472,7 +488,7 @@ f.addEventListener("load",function(){setTimeout(go,4000)});}(window,document);
 <section id="work" style="max-width: 1120px; margin: 0 auto; padding: 88px 24px">
 <p class="reveal kick" style="margin: 0 0 12px; font-family: 'IBM Plex Mono', monospace; font-size: 14px; text-transform: uppercase; letter-spacing: 0.08em">Sample site</p>
 <h2 class="reveal" style="margin: 0 0 16px; font-size: clamp(32px, 5vw, 56px); letter-spacing: -0.03em; line-height: 1">Before <mark>and after.</mark></h2>
-<p class="reveal" style="margin: 0 0 32px; font-size: 18px; line-height: 1.6; max-width: 680px">Drag the slider. On the left, the kind of outdated site a lot of small businesses still have. On the right, the new site I built for Cedar Creek Plumbing, a made-up company I use as a sample.</p>
+<p class="reveal" style="margin: 0 0 32px; font-size: 18px; line-height: 1.6; max-width: 680px">Drag the slider: an outdated site vs. the new site I built for Cedar Creek Plumbing (a made-up sample company).</p>
 <div class="ba reveal" id="ba">
 <picture><source type="image/webp" srcset="img/after.webp"><img src="img/after.jpg" width="1200" height="750" loading="lazy" decoding="async" alt="New Cedar Creek Plumbing homepage: clean layout, call button, quote form and service list"></picture>
 <div class="ba-before"><picture><source type="image/webp" srcset="img/before.webp"><img src="img/before.jpg" width="1200" height="750" loading="lazy" decoding="async" alt="Outdated example website: cluttered layout, scrolling banner, under-construction notice and no contact form"></picture></div>
@@ -499,10 +515,10 @@ f.addEventListener("load",function(){setTimeout(go,4000)});}(window,document);
 <picture style="flex: 0 1 340px; display: block"><source type="image/webp" srcset="img/carson.webp"><img src="img/carson.jpg" width="800" height="1000" loading="lazy" decoding="async" alt="Carson Demny, founder of Demny Web Agency" class="photo" style="display: block; width: 100%; height: auto; border: 2px solid #000000"></picture>
 <div style="flex: 1 1 420px">
 <h2 style="margin: 0 0 24px; font-size: clamp(32px, 5vw, 56px); letter-spacing: -0.03em; line-height: 1">Hi, I'm <mark>Carson.</mark> <span class="wave" aria-hidden="true">👋</span></h2>
-<p style="margin: 0 0 16px; font-size: 18px; line-height: 1.6; max-width: 600px">I split my time between Cypress and Waco, Texas, and I started Demny Web Agency to help small businesses get found online and get more calls.</p>
-<p style="margin: 0 0 16px; font-size: 18px; line-height: 1.6; max-width: 600px">You work with me directly. I'm your one point of contact: I answer your calls and texts, I know your business, and I keep you updated every month.</p>
+<p style="margin: 0 0 16px; font-size: 18px; line-height: 1.6; max-width: 600px">Based in Cypress &amp; Waco, TX. I help small businesses get found online and get more calls.</p>
+<p style="margin: 0 0 16px; font-size: 18px; line-height: 1.6; max-width: 600px">You work with me directly: I answer your calls and texts and keep you updated every month.</p>
 <div style="border-left: 4px solid #000000; padding-left: 16px; margin: 0 0 28px; max-width: 600px"><picture><source type="image/webp" srcset="img/apb-logo.webp"><img src="img/apb-logo.png" width="640" height="147" alt="APB Systems" loading="lazy" decoding="async" class="apb-about"></picture>
-<p style="margin: 0; font-size: 18px; line-height: 1.6">Behind me is my partner, <b>APB Systems</b>, led by owner <b>Valentino</b>. Together we handle your website, your Google Business Profile, your reviews and bringing in new customers. You get a full team doing the work, with one person you can always reach.</p></div>
+<p style="margin: 0; font-size: 18px; line-height: 1.6">Behind me: my partner <b>APB Systems</b> and owner <b>Valentino</b>. A full team doing the work, one person to call.</p></div>
 <a class="btn-dark btn" href="#contact" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; background: #000000; color: #ffffff; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #000000">Talk to Carson</a>
 </div>
 </div>
@@ -511,7 +527,7 @@ f.addEventListener("load",function(){setTimeout(go,4000)});}(window,document);
 <section id="pricing" style="max-width: 1120px; margin: 0 auto; padding: 88px 24px">
 <p class="reveal kick" style="margin: 0 0 12px; font-family: 'IBM Plex Mono', monospace; font-size: 14px; text-transform: uppercase; letter-spacing: 0.08em">Pricing</p>
 <h2 class="reveal" style="margin: 0 0 16px; font-size: clamp(32px, 5vw, 56px); letter-spacing: -0.03em; line-height: 1">One <mark>simple</mark> price.</h2>
-<p class="reveal" style="margin: 0 0 48px; font-size: 18px; line-height: 1.6; max-width: 640px">$397 a month, every service included. Pay month-to-month, or pay upfront and save.</p>
+<p class="reveal" style="margin: 0 0 48px; font-size: 18px; line-height: 1.6; max-width: 640px">$397/month, everything included. Prepay to save.</p>
 <div class="reveal stagger plans">
 <div class="plan plan-top lift">
 <p class="plan-name">Monthly</p>
@@ -603,7 +619,7 @@ f.addEventListener("load",function(){setTimeout(go,4000)});}(window,document);
 <div class="reveal" style="flex: 1 1 420px">
 <p style="margin: 0 0 12px; font-family: 'IBM Plex Mono', monospace; font-size: 14px; text-transform: uppercase; letter-spacing: 0.08em">Free website check</p>
 <h2 style="margin: 0; font-size: clamp(36px, 6vw, 72px); letter-spacing: -0.04em; line-height: 0.95">Is your website <mark>costing you customers?</mark></h2>
-<p style="margin: 24px 0 0; font-size: 18px; line-height: 1.6; max-width: 480px">Send me your website (or tell me you don't have one). I'll look it over for free and send you a short report: what's working, what's not, and what I'd change. No pressure to sign up.</p>
+<p style="margin: 24px 0 0; font-size: 18px; line-height: 1.6; max-width: 480px">Send your website (or say you don't have one). I'll check it free and call you within a day.</p>
 <div style="margin-top: 32px; display: flex; flex-direction: column; gap: 12px; max-width: 360px">
 <a class="btn-dark btn btn-w" href="tel:+18327453523" style="display: inline-flex; align-items: center; justify-content: center; min-height: 56px; padding: 0 28px; background: #000000; color: #ffffff; text-decoration: none; font-weight: 700; font-size: 18px; border: 2px solid #ffffff">Call (832) 745-3523</a>
 <a class="btn-dark btn btn-w" href="sms:+18327453523?&amp;body=Hi%20Carson%2C%20I%27m%20interested%20in%20a%20free%20website%20check." style="display: inline-flex; align-items: center; justify-content: center; min-height: 56px; padding: 0 28px; background: #000000; color: #ffffff; text-decoration: none; font-weight: 700; font-size: 18px; border: 2px solid #ffffff">Text (832) 745-3523</a>
