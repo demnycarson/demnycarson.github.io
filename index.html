@@ -213,6 +213,39 @@ mark{background:none;color:var(--hl);padding:0}
 .svc-detail li span{font-weight:400;font-size:16px;line-height:1.6;color:#ccc}
 .svc-detail li span b{color:#fff}
 @media (max-width:860px){.svc-detail{grid-template-columns:1fr!important}}
+/* hero v2 */
+.hero{max-width:1120px;margin:0 auto;padding:80px 24px 64px;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:48px;align-items:center}
+.hero-scores{grid-column:1/-1}
+.hero-scores .scores{margin-top:8px}
+.hero-demo{width:100%;max-width:440px;justify-self:end}
+.hd-card{border:3px solid #000;background:#fff;box-shadow:10px 10px 0 var(--hl);padding:14px;font-family:"Space Grotesk",sans-serif;contain:layout paint}
+.hd-top{display:flex;align-items:center;gap:10px}
+.hd-g{flex:none;width:34px;height:34px;display:grid;place-items:center;font-weight:700;font-size:20px;border:2px solid #000}
+.hd-search{flex:1;display:flex;align-items:center;gap:8px;border:2px solid #000;height:38px;padding:0 10px;font-size:15px;white-space:nowrap;overflow:hidden}
+.hd-caret{width:2px;height:18px;background:#000;animation:hdblink 1s steps(1) infinite}
+@keyframes hdblink{50%{opacity:0}}
+.hd-map{position:relative;height:118px;margin:12px 0;border:2px solid #000;overflow:hidden;background-color:#e9edf5;background-image:linear-gradient(0deg,transparent 30%,#fff 30%,#fff 36%,transparent 36%,transparent 72%,#fff 72%,#fff 77%,transparent 77%),linear-gradient(90deg,transparent 22%,#fff 22%,#fff 26%,transparent 26%,transparent 58%,#fff 58%,#fff 61%,transparent 61%,transparent 86%,#fff 86%,#fff 89%,transparent 89%),linear-gradient(115deg,transparent 60%,#cfd6e4 60%,#cfd6e4 65%,transparent 65%)}
+.hd-map i{position:absolute;width:12px;height:12px;border-radius:50% 50% 50% 0;transform:translate(-50%,-100%) rotate(-45deg);background:#9aa3b5;transition:opacity .6s}
+.hd-pin{position:absolute;left:54%;top:52%;width:18px;height:18px;border-radius:50% 50% 50% 0;background:var(--hl);border:2px solid #000;transform:translate(-50%,-100%) rotate(-45deg) scale(var(--ps,1));transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+.hd-pinrk{position:absolute;left:50%;bottom:150%;transform:rotate(45deg) translate(-50%,0);transform-origin:0 0;font-style:normal;font-weight:700;font-size:12px;background:#000;color:#fff;padding:2px 5px;white-space:nowrap}
+.hd-list{list-style:none;margin:0;padding:0;position:relative;height:calc(5*48px + 4*6px)}
+.hd-row{position:absolute;left:0;right:0;top:0;height:48px;display:flex;align-items:center;gap:10px;padding:0 12px;border:2px solid #000;background:#fff;transform:translateY(calc(var(--slot,0)*54px));transition:transform .7s cubic-bezier(.2,.8,.2,1),background-color .3s,color .3s}
+.hd-rk{font:500 14px "IBM Plex Mono",monospace;width:26px;flex:none}
+.hd-nm{font-weight:700;font-size:15px;line-height:1.1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.hd-nm small{display:block;font-weight:400;font-size:12px;color:#555;margin-top:2px}
+.hd-me{background:var(--hl);color:#fff;border-color:var(--hl);z-index:2;box-shadow:4px 4px 0 #000}
+.hd-me small{color:#dfe7ff}
+.hd-stage{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:12px;font:500 12px/1 "IBM Plex Mono",monospace;text-transform:uppercase;letter-spacing:.06em}
+.hd-badge{border:2px solid #000;padding:6px 8px;transition:background-color .3s,color .3s}
+.hd-badge.on{background:#000;color:#fff}
+.hd-calls{color:var(--hl);font-weight:500}
+.ticker{border-top:2px solid #000;border-bottom:2px solid #000;background:#000;color:#fff;overflow:hidden;white-space:nowrap}
+.ticker-track{display:inline-flex;gap:0;animation:tick 38s linear infinite;will-change:transform}
+.ticker span{font-weight:700;font-size:clamp(20px,2.4vw,30px);letter-spacing:-.02em;padding:14px 22px;display:inline-flex;align-items:center}
+.ticker span::after{content:"";width:9px;height:9px;background:var(--hl);margin-left:44px;display:inline-block}
+@keyframes tick{to{transform:translateX(-50%)}}
+@media (max-width:900px){.hero{grid-template-columns:1fr;gap:40px;padding-top:56px}.hero-demo{justify-self:start;max-width:420px}}
+@media (prefers-reduced-motion:reduce){.ticker-track,.hd-caret{animation:none}.hd-row,.hd-pin{transition:none}}
 /* testimonials */
 .testi-wrap{max-width:880px;border:3px solid #000;box-shadow:10px 10px 0 var(--hl);background:#000}
 .testi-vid{display:block;width:100%;height:auto;aspect-ratio:4/3;background:#000}
@@ -311,15 +344,25 @@ f.addEventListener("load",function(){setTimeout(go,4000)});}(window,document);
 </header>
 
 <main id="main">
-<section id="top" style="max-width: 1120px; margin: 0 auto; padding: 96px 24px 80px">
+<section id="top" class="hero">
+<div class="hero-copy">
 <p style="margin: 0 0 20px; font-family: 'IBM Plex Mono', monospace; font-size: 14px; text-transform: uppercase; letter-spacing: 0.08em">Get found &middot; Get chosen &middot; Get more customers</p>
-<h1 style="margin: 0; font-size: clamp(40px, 7vw, 84px); line-height: 0.98; letter-spacing: -0.04em; font-weight: 700; max-width: 1000px">Your competitors are in the top 3 on Google. <span class="hero-q">Why aren't you?</span></h1>
-<p style="margin: 32px 0 0; font-size: 20px; line-height: 1.5; max-width: 600px">I'm Carson Demny. With APB Systems, I build your website, help you show up on Google, and move you up Google Maps. All for one simple monthly price.</p>
+<h1 style="margin: 0; font-size: clamp(40px, 5.4vw, 70px); line-height: 0.98; letter-spacing: -0.04em; font-weight: 700; max-width: 640px">Your competitors are in the top 3 on Google. <span class="hero-q">Why aren't you?</span></h1>
+<p style="margin: 32px 0 0; font-size: 20px; line-height: 1.5; max-width: 540px">I'm Carson Demny. With APB Systems, I build your website, help you show up on Google, and move you up Google Maps. All for one simple monthly price.</p>
 <div style="margin-top: 40px; display: flex; flex-wrap: wrap; gap: 16px">
 <a class="btn-dark btn" href="#contact" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; background: #000000; color: #ffffff; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #000000">Find out where you rank</a>
 <a class="btn-light btn" href="#work" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; background: #ffffff; color: #000000; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #000000">See a sample site</a>
 </div>
-<div class="scores">
+</div>
+<div class="hero-demo" aria-hidden="true">
+<div class="hd-card">
+<div class="hd-top"><span class="hd-g">G</span><div class="hd-search"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.6"><circle cx="10.5" cy="10.5" r="7"/><path d="M16 16l6 6"/></svg><span class="hd-q">plumber near me</span><span class="hd-caret"></span></div></div>
+<div class="hd-map"><i style="left:18%;top:36%"></i><i style="left:44%;top:22%"></i><i style="left:78%;top:30%"></i><i style="left:30%;top:70%"></i><i style="left:64%;top:64%"></i><b class="hd-pin"><em class="hd-pinrk">#5</em></b></div>
+<ol class="hd-list"><li class="hd-row" data-i="0" style="--slot:0"><span class="hd-rk">#1</span><span class="hd-nm">Bayou City Plumbing<small>★★★★★ 4.8 (212)</small></span></li><li class="hd-row" data-i="1" style="--slot:1"><span class="hd-rk">#2</span><span class="hd-nm">Lone Star Pros<small>★★★★★ 4.7 (168)</small></span></li><li class="hd-row" data-i="2" style="--slot:2"><span class="hd-rk">#3</span><span class="hd-nm">Rapid Flow Co.<small>★★★★★ 4.6 (131)</small></span></li><li class="hd-row" data-i="3" style="--slot:3"><span class="hd-rk">#4</span><span class="hd-nm">Northside Services<small>★★★★★ 4.5 (97)</small></span></li><li class="hd-row hd-me" data-i="me" style="--slot:4"><span class="hd-rk">#5</span><span class="hd-nm">Your Business<small>★★★★★ 4.9 (<span class="hd-rev">12</span>)</small></span></li></ol>
+<div class="hd-stage"><span class="hd-badge">Stage 1 · Top 10</span><span class="hd-calls">+<span class="hd-ncalls">0</span> calls this week</span></div>
+</div>
+</div>
+<div class="hero-scores"><div class="scores">
 <ul aria-label="Google Lighthouse scores for this website, tested on mobile">
 <li><b>100</b><span>Performance</span></li>
 <li><b>100</b><span>Accessibility</span></li>
@@ -327,8 +370,9 @@ f.addEventListener("load",function(){setTimeout(go,4000)});}(window,document);
 <li><b>100</b><span>SEO</span></li>
 </ul>
 <p>Google's own speed and quality test gave this site perfect scores on phones (October 2026). <a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fdemnyweb.com%2F" target="_blank" rel="noopener">Test it yourself &#8599;</a></p>
-</div>
+</div></div>
 </section>
+<div class="ticker" aria-label="Who we help"><div class="ticker-track"><span>Plumbers</span><span>Churches</span><span>Barbers</span><span>Realtors</span><span>Roofers</span><span>Gyms</span><span>HVAC</span><span>Lawyers</span><span>Salons</span><span>Electricians</span><span>Landscapers</span><span>Accountants</span><span aria-hidden="true">Plumbers</span><span aria-hidden="true">Churches</span><span aria-hidden="true">Barbers</span><span aria-hidden="true">Realtors</span><span aria-hidden="true">Roofers</span><span aria-hidden="true">Gyms</span><span aria-hidden="true">HVAC</span><span aria-hidden="true">Lawyers</span><span aria-hidden="true">Salons</span><span aria-hidden="true">Electricians</span><span aria-hidden="true">Landscapers</span><span aria-hidden="true">Accountants</span></div></div>
 
 <section class="partner" aria-label="Our partner">
 <div class="partner-in reveal">
@@ -413,7 +457,7 @@ f.addEventListener("load",function(){setTimeout(go,4000)});}(window,document);
 <p class="reveal kick" style="margin: 0 0 12px; font-family: 'IBM Plex Mono', monospace; font-size: 14px; text-transform: uppercase; letter-spacing: 0.08em">Testimonials</p>
 <h2 class="reveal" style="margin: 0 0 16px; font-size: clamp(32px, 5vw, 56px); letter-spacing: -0.03em; line-height: 1">Real business owners. <mark>Real results.</mark></h2>
 <p class="reveal" style="margin: 0 0 40px; font-size: 18px; line-height: 1.6; max-width: 640px">Hear from business owners who've worked with our partner APB Systems and its owner, Valentino, about showing up on Google and getting more calls.</p>
-<div class="reveal testi-wrap"><video class="testi-vid" controls playsinline preload="none" poster="testimonials-poster.jpg" aria-label="Video testimonials from business owners who worked with APB Systems"><source src="testimonials.mp4" type="video/mp4">Your browser can't play this video. <a href="testimonials.mp4">Download it here.</a></video></div>
+<div class="reveal testi-wrap"><video class="testi-vid" controls playsinline preload="none" data-poster="testimonials-poster.jpg" aria-label="Video testimonials from business owners who worked with APB Systems"><source src="testimonials.mp4" type="video/mp4">Your browser can't play this video. <a href="testimonials.mp4">Download it here.</a></video></div>
 <div class="reveal" style="margin-top: 40px; display: flex; flex-wrap: wrap; gap: 16px; align-items: center"><a class="btn-dark btn" href="#contact" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #000000; background: #000000; color: #ffffff">Get results like this</a><a class="btn-light btn" href="#pricing" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #000000; background: #ffffff; color: #000000">See pricing</a></div>
 </div>
 </section>
@@ -712,6 +756,24 @@ addEventListener("scroll",function(){if(!t){t=1;requestAnimationFrame(u);}},{pas
 (function(){var b=document.querySelector(".menu-btn"),h=b&&b.closest("nav");if(!b)return;
 b.addEventListener("click",function(){var o=h.classList.toggle("nav-open");b.setAttribute("aria-expanded",o);b.textContent=o?"Close":"Menu";});
 h.querySelectorAll(".navlinks a").forEach(function(a){a.addEventListener("click",function(){h.classList.remove("nav-open");b.setAttribute("aria-expanded","false");b.textContent="Menu";});});})();
+</script>
+<script>
+(function(){var c=document.querySelector(".hd-card");if(!c)return;
+var rows=[].slice.call(c.querySelectorAll(".hd-row:not(.hd-me)")),me=c.querySelector(".hd-me"),rk=me.querySelector(".hd-rk"),pinrk=c.querySelector(".hd-pinrk"),pin=c.querySelector(".hd-pin"),
+q=c.querySelector(".hd-q"),badge=c.querySelector(".hd-badge"),rev=c.querySelector(".hd-rev"),calls=c.querySelector(".hd-ncalls"),dots=c.querySelectorAll(".hd-map i");
+var qs=["plumber near me","church near me","barber near me","realtor near me","roofer near me"],qi=0,pos=4,timer=null,step=0,reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
+function layout(){rows.forEach(function(r,i){var slot=i<pos?i:i+1;r.style.setProperty("--slot",slot);r.querySelector(".hd-rk").textContent="#"+(slot+1);});
+me.style.setProperty("--slot",pos);rk.textContent="#"+(pos+1);pinrk.textContent="#"+(pos+1);pin.style.setProperty("--ps",1+(4-pos)*0.12);
+for(var k=0;k<dots.length;k++)dots[k].style.opacity=pos<2?.45:1;
+badge.textContent=pos===0?"Stage 3 · #1":pos<3?"Stage 2 · Top 3":"Stage 1 · Top 10";badge.classList.toggle("on",pos===0);
+rev.textContent=[236,171,98,41,12][pos];calls.textContent=[23,17,9,3,0][pos];}
+function typeQ(t){if(reduce){q.textContent=t;return;}var n=0;q.textContent="";var iv=setInterval(function(){q.textContent=t.slice(0,++n);if(n>=t.length)clearInterval(iv);},45);}
+function tick(){step++;if(pos>0){pos--;layout();}else if(step>6){step=0;pos=4;qi=(qi+1)%qs.length;typeQ(qs[qi]);layout();}}
+function start(){if(!timer&&!reduce)timer=setInterval(tick,1400);}function stop(){clearInterval(timer);timer=null;}
+function go(){layout();if("IntersectionObserver" in window){new IntersectionObserver(function(e){e[0].isIntersecting?start():stop();}).observe(c);}else start();}
+if(document.readyState==="complete")setTimeout(go,300);else addEventListener("load",function(){setTimeout(go,300);});
+document.addEventListener("visibilitychange",function(){document.hidden?stop():start();});
+})();
 </script>
 </body>
 </html>
