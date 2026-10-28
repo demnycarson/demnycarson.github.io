@@ -268,12 +268,7 @@ mark{background:none;color:var(--hl);padding:0}
 .res-w{display:block;font:500 13px/1.4 "IBM Plex Mono",monospace;text-transform:uppercase;letter-spacing:.06em;color:#555;margin-top:10px}
 .res-hl{background:var(--hl);border-color:var(--hl);color:#fff}.res-hl b{color:#fff}.res-hl .res-w{color:#dfe6ff}
 .res-note{margin:0 0 32px;font:400 13px/1.5 "IBM Plex Mono",monospace;color:#555}
-.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px}
-.q{margin:0;background:#fff;border:3px solid #000;padding:34px 24px 24px;position:relative}
-.q::before{content:"\201C";position:absolute;top:-18px;left:16px;height:40px;overflow:hidden;font:700 64px/1 "Space Grotesk",sans-serif;color:var(--hl);background:#f3f6ff;padding:0 6px}
-.q blockquote{margin:0;font-size:20px;font-weight:700;line-height:1.35;letter-spacing:-.01em}
-.q figcaption{margin-top:14px;font:500 13px "IBM Plex Mono",monospace;text-transform:uppercase;letter-spacing:.06em;color:#555}
-@media (max-width:820px){.res,.quotes{grid-template-columns:1fr}.quotes{gap:28px}}
+@media (max-width:820px){.res{grid-template-columns:1fr}}
 /* testimonials */
 .testi-wrap{max-width:880px;border:3px solid #000;box-shadow:10px 10px 0 var(--hl);background:#000}
 .testi-vid{display:block;width:100%;height:auto;aspect-ratio:4/3;background:#000}
@@ -483,11 +478,6 @@ f.addEventListener("load",function(){setTimeout(go,4000)});}(window,document);
 </div>
 <p class="reveal res-note">Google Maps results from APB Systems clients. Every business is different, and results vary.</p>
 <div class="reveal testi-wrap"><video class="testi-vid" controls playsinline preload="none" data-poster="testimonials-poster.jpg" aria-label="Video testimonials from business owners who worked with APB Systems"><source src="testimonials.mp4" type="video/mp4">Your browser can't play this video. <a href="testimonials.mp4">Download it here.</a></video></div>
-<div class="reveal stagger quotes">
-<figure class="q"><blockquote>&ldquo;Got verified, got approved, got us back to the top of Google.&rdquo;</blockquote><figcaption>Crockett Rodeo Glass</figcaption></figure>
-<figure class="q"><blockquote>&ldquo;Valentino is really professional. He knows his stuff.&rdquo;</blockquote><figcaption>APB Systems client</figcaption></figure>
-<figure class="q"><blockquote>&ldquo;Their customer service is next level.&rdquo;</blockquote><figcaption>APB Systems client</figcaption></figure>
-</div>
 <div class="reveal" style="margin-top: 40px; display: flex; flex-wrap: wrap; gap: 16px; align-items: center"><a class="btn-dark btn" href="#contact" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #000000; background: #000000; color: #ffffff">Get results like this</a><a class="btn-light btn" href="#pricing" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #000000; background: #ffffff; color: #000000">See pricing</a></div>
 </div>
 </section>
