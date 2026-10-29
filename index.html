@@ -218,7 +218,7 @@ p{color:#334155}
 #services p,#contact p,.dark p,.stats p,.ft p,.hd-card p,.res-hl p{color:inherit}
 .climb-top p,.plan-top p{color:#e2e8f0!important}
 h1,h2,h3{color:inherit}
-.btn,.who-c,.climb-step,.res-c,.plan,.form-card,.hd-card,.testi-wrap,.ft-cta,.areas-band a,.shot,.form-card input,.form-card textarea,.form-card button,.callbar a,.ico,.kick,.hero-q,.sticker,.perks li{border-radius:10px}
+.who-c,.climb-step,.res-c,.plan,.form-card,.hd-card,.testi-wrap,.ft-cta,.areas-band a,.shot,.form-card input,.form-card textarea,.ico,.kick,.hero-q,.sticker,.perks li{border-radius:10px}
 .testi-wrap{overflow:hidden}
 .shot{border:2px solid #0f172a;overflow:hidden;background:#fff;box-shadow:0 18px 40px rgba(15,23,42,.12)}
 .shot-bar{display:flex;align-items:center;gap:7px;padding:10px 14px;background:#f1f5f9;border-bottom:2px solid #0f172a}
@@ -226,6 +226,7 @@ h1,h2,h3{color:inherit}
 .shot-bar span{margin-left:10px;font:500 13px "IBM Plex Mono",monospace;color:#64748b}
 .shot img{display:block;width:100%;height:auto}
 main>section{line-height:1.6}
+.btn,.form-card button,.callbar a,.ft-cta{border-radius:0!important}
 /* visual pass */
 .gill{display:block;width:100%;height:auto;max-height:130px;margin:0 0 18px;background:#111;border:2px solid #333;padding:10px;box-sizing:border-box}
 .stats{background:var(--hl);color:#fff;border-bottom:2px solid #0f172a}
@@ -369,7 +370,6 @@ f.addEventListener("load",function(){setTimeout(go,4000)});}(window,document);
 <a class="nav" href="#rankings" style="text-decoration: none">Rankings</a>
 <a class="nav" href="#who" style="text-decoration: none">Who I help</a>
 <a class="nav" href="#testimonials" style="text-decoration: none">Reviews</a>
-<a class="nav" href="#work" style="text-decoration: none">Work</a>
 <a class="nav" href="#about" style="text-decoration: none">About</a>
 <a class="nav" href="#pricing" style="text-decoration: none">Pricing</a>
 <a class="nav" href="#faq" style="text-decoration: none">FAQ</a>
@@ -386,8 +386,8 @@ f.addEventListener("load",function(){setTimeout(go,4000)});}(window,document);
 <h1 style="margin: 0; font-size: clamp(40px, 5.4vw, 70px); line-height: 0.98; letter-spacing: -0.04em; font-weight: 700; max-width: 640px">Your competitors are in the top 3 on Google. <span class="hero-q">Why aren't you?</span></h1>
 <p style="margin: 32px 0 0; font-size: 20px; line-height: 1.5; max-width: 540px">I build your website and move you up Google Maps, so more customers call you.</p>
 <div style="margin-top: 40px; display: flex; flex-wrap: wrap; gap: 16px">
-<a class="btn-dark btn" href="#contact" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; background: #0f172a; color: #ffffff; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #0f172a">Find out where you rank</a>
-<a class="btn-light btn" href="#work" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; background: #ffffff; color: #0f172a; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #0f172a">See a sample site</a>
+<a class="btn-dark btn" href="#contact" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; background: #000000; color: #ffffff; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #000000">Find out where you rank</a>
+<a class="btn-light btn" href="#rankings" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; background: #ffffff; color: #000000; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #000000">See how it works</a>
 </div>
 </div>
 <div class="hero-demo" aria-hidden="true">
@@ -446,7 +446,7 @@ f.addEventListener("load",function(){setTimeout(go,4000)});}(window,document);
 <ul class="goal-inc"><li>Google Business Profile setup</li><li>Review growth system</li><li>Monthly posts, photos &amp; reports</li></ul>
 </div>
 </div>
-<div class="reveal" style="margin-top: 40px; display: flex; flex-wrap: wrap; gap: 16px; align-items: center"><a class="btn-light btn btn-w" href="#contact" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #ffffff; background: #ffffff; color: #0f172a">Get a free website check</a><a class="btn-dark btn btn-w" href="#pricing" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #ffffff; background: #0f172a; color: #ffffff">See pricing</a></div>
+<div class="reveal" style="margin-top: 40px; display: flex; flex-wrap: wrap; gap: 16px; align-items: center"><a class="btn-light btn btn-w" href="#contact" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #ffffff; background: #ffffff; color: #000000">Get a free website check</a><a class="btn-dark btn btn-w" href="#pricing" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #ffffff; background: #000000; color: #ffffff">See pricing</a></div>
 </div>
 </section>
 
@@ -476,7 +476,7 @@ f.addEventListener("load",function(){setTimeout(go,4000)});}(window,document);
 </div>
 </div>
 <p class="reveal" style="margin: 24px 0 0; font-family: 'IBM Plex Mono', monospace; font-size: 13px; line-height: 1.6; max-width: 720px; color: #444">Rankings usually build over a few months and depend on your location and competition. No one can honestly guarantee a spot, but this is the plan every client gets.</p>
-<div class="reveal" style="margin-top: 40px; display: flex; flex-wrap: wrap; gap: 16px; align-items: center"><a class="btn-dark btn" href="#contact" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #0f172a; background: #0f172a; color: #ffffff">See where you rank now</a><a class="btn-light btn" href="#pricing" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #0f172a; background: #ffffff; color: #0f172a">See pricing</a></div>
+<div class="reveal" style="margin-top: 40px; display: flex; flex-wrap: wrap; gap: 16px; align-items: center"><a class="btn-dark btn" href="#contact" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #000000; background: #000000; color: #ffffff">See where you rank now</a><a class="btn-light btn" href="#pricing" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #000000; background: #ffffff; color: #000000">See pricing</a></div>
 </div>
 </section>
 
@@ -492,7 +492,7 @@ f.addEventListener("load",function(){setTimeout(go,4000)});}(window,document);
 </div>
 <p class="reveal res-note">Google Maps results from APB Systems clients. Every business is different, and results vary.</p>
 <div class="reveal testi-wrap"><video class="testi-vid" controls playsinline preload="none" data-poster="testimonials-poster.jpg" aria-label="Video testimonials from business owners who worked with APB Systems"><source src="testimonials.mp4" type="video/mp4">Your browser can't play this video. <a href="testimonials.mp4">Download it here.</a></video></div>
-<div class="reveal" style="margin-top: 40px; display: flex; flex-wrap: wrap; gap: 16px; align-items: center"><a class="btn-dark btn" href="#contact" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #0f172a; background: #0f172a; color: #ffffff">Get results like this</a><a class="btn-light btn" href="#pricing" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #0f172a; background: #ffffff; color: #0f172a">See pricing</a></div>
+<div class="reveal" style="margin-top: 40px; display: flex; flex-wrap: wrap; gap: 16px; align-items: center"><a class="btn-dark btn" href="#contact" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #000000; background: #000000; color: #ffffff">Get results like this</a><a class="btn-light btn" href="#pricing" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #000000; background: #ffffff; color: #000000">See pricing</a></div>
 </div>
 </section>
 
@@ -514,24 +514,6 @@ f.addEventListener("load",function(){setTimeout(go,4000)});}(window,document);
 </div>
 </section>
 
-<section id="work" style="max-width: 1120px; margin: 0 auto; padding: 88px 24px">
-<p class="reveal kick" style="margin: 0 0 12px; font-family: 'IBM Plex Mono', monospace; font-size: 14px; text-transform: uppercase; letter-spacing: 0.08em">Sample site</p>
-<h2 class="reveal" style="margin: 0 0 16px; font-size: clamp(32px, 5vw, 56px); letter-spacing: -0.03em; line-height: 1">A site built to <mark>get calls.</mark></h2>
-<p class="reveal" style="margin: 0 0 32px; font-size: 18px; line-height: 1.6; max-width: 680px">A sample site I built for Cedar Creek Plumbing, a made-up company.</p>
-<div class="shot reveal"><div class="shot-bar"><i></i><i></i><i></i><span>cedarcreekplumbing.com</span></div><picture><source type="image/webp" srcset="img/after.webp"><img src="img/after.jpg" width="1200" height="750" loading="lazy" decoding="async" alt="Cedar Creek Plumbing sample homepage: clean layout, call button, quote form and service list"></picture></div>
-<p class="reveal" style="margin: 32px 0 12px; font-family: 'IBM Plex Mono', monospace; font-size: 14px; text-transform: uppercase; letter-spacing: 0.08em">What&rsquo;s inside the sample site</p>
-<div class="reveal stagger" style="display: flex; flex-wrap: wrap; gap: 2px; background: #000; border: 2px solid #000">
-<div class="lift" style="flex: 1 1 200px; background: #fff; padding: 24px"><div style="font-size: 44px; font-weight: 700; letter-spacing: -0.03em">11</div><p style="margin: 4px 0 0; font-size: 16px">pages: one for each service and city, plus FAQ and contact</p></div>
-<div class="lift" style="flex: 1 1 200px; background: #fff; padding: 24px"><div style="font-size: 44px; font-weight: 700; letter-spacing: -0.03em">11</div><p style="margin: 4px 0 0; font-size: 16px">separate contact forms, each labeled by the page it's on</p></div>
-<div class="lift" style="flex: 1 1 200px; background: #fff; padding: 24px"><div style="font-size: 44px; font-weight: 700; letter-spacing: -0.03em">3</div><p style="margin: 4px 0 0; font-size: 16px">city pages written with real local details, not copy-paste</p></div>
-</div>
-<div class="reveal" style="margin-top: 32px; display: flex; flex-wrap: wrap; gap: 16px; align-items: center">
-<a class="btn-dark btn" href="/sample/cedar-creek/" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; background: #0f172a; color: #ffffff; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #0f172a">Click through the sample site &rarr;</a>
-<a class="btn-light btn" href="#contact" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #0f172a; background: #ffffff; color: #0f172a">Want one like this?</a>
-<span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px">Cedar Creek Plumbing is not a real business.</span>
-</div>
-</section>
-
 <section id="about" style="max-width: 1120px; margin: 0 auto; padding: 88px 24px">
 <p class="reveal kick" style="margin: 0 0 12px; font-family: 'IBM Plex Mono', monospace; font-size: 14px; text-transform: uppercase; letter-spacing: 0.08em">About</p>
 <div class="reveal" style="display: flex; flex-wrap: wrap; gap: 48px; align-items: center">
@@ -542,7 +524,7 @@ f.addEventListener("load",function(){setTimeout(go,4000)});}(window,document);
 <p style="margin: 0 0 16px; font-size: 18px; line-height: 1.6; max-width: 600px">You work with me directly: I answer your calls and texts and keep you updated every month.</p>
 <div style="border-left: 4px solid #0f172a; padding-left: 16px; margin: 0 0 28px; max-width: 600px"><picture><source type="image/webp" srcset="img/apb-logo.webp"><img src="img/apb-logo.png" width="640" height="147" alt="APB Systems" loading="lazy" decoding="async" class="apb-about"></picture>
 <p style="margin: 0; font-size: 18px; line-height: 1.6">Behind me: my partner <b>APB Systems</b> and owner <b>Valentino</b>. A full team doing the work, one person to call.</p></div>
-<a class="btn-dark btn" href="#contact" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; background: #0f172a; color: #ffffff; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #0f172a">Talk to Carson</a>
+<a class="btn-dark btn" href="#contact" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; background: #000000; color: #ffffff; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #000000">Talk to Carson</a>
 </div>
 </div>
 </section>
@@ -559,7 +541,7 @@ f.addEventListener("load",function(){setTimeout(go,4000)});}(window,document);
 <p class="plan-sub">/ month</p>
 <p class="plan-save">Month-to-month</p>
 <ul><li>All services included</li><li>Cancel anytime</li></ul>
-<a class="btn-light btn btn-w" href="#contact" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 20px; background: #ffffff; color: #0f172a; text-decoration: none; font-weight: 700; font-size: 17px; border: 2px solid #ffffff">Get started</a>
+<a class="btn-light btn btn-w" href="#contact" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 20px; background: #ffffff; color: #000000; text-decoration: none; font-weight: 700; font-size: 17px; border: 2px solid #ffffff">Get started</a>
 </div>
 <div class="plan lift">
 <p class="plan-name">3 months</p>
@@ -568,7 +550,7 @@ f.addEventListener("load",function(){setTimeout(go,4000)});}(window,document);
 <p class="plan-sub">total for 3 months</p>
 <p class="plan-save">You save $60</p>
 <ul><li>Everything in Monthly</li><li>Pay once upfront</li></ul>
-<a class="btn-dark btn" href="#contact" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 20px; background: #0f172a; color: #ffffff; text-decoration: none; font-weight: 700; font-size: 17px; border: 2px solid #0f172a">Choose plan</a>
+<a class="btn-dark btn" href="#contact" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 20px; background: #000000; color: #ffffff; text-decoration: none; font-weight: 700; font-size: 17px; border: 2px solid #000000">Choose plan</a>
 </div>
 <div class="plan lift">
 <p class="plan-name">6 months</p>
@@ -577,7 +559,7 @@ f.addEventListener("load",function(){setTimeout(go,4000)});}(window,document);
 <p class="plan-sub">total for 6 months</p>
 <p class="plan-save">You save $180</p>
 <ul><li>Everything in Monthly</li><li>Pay once upfront</li></ul>
-<a class="btn-dark btn" href="#contact" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 20px; background: #0f172a; color: #ffffff; text-decoration: none; font-weight: 700; font-size: 17px; border: 2px solid #0f172a">Choose plan</a>
+<a class="btn-dark btn" href="#contact" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 20px; background: #000000; color: #ffffff; text-decoration: none; font-weight: 700; font-size: 17px; border: 2px solid #000000">Choose plan</a>
 </div>
 <div class="plan lift">
 <p class="plan-name">12 months</p>
@@ -586,7 +568,7 @@ f.addEventListener("load",function(){setTimeout(go,4000)});}(window,document);
 <p class="plan-sub">total for 12 months</p>
 <p class="plan-save">You save $480</p>
 <ul><li>Everything in Monthly</li><li>Pay once upfront</li></ul>
-<a class="btn-dark btn" href="#contact" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 20px; background: #0f172a; color: #ffffff; text-decoration: none; font-weight: 700; font-size: 17px; border: 2px solid #0f172a">Choose plan</a>
+<a class="btn-dark btn" href="#contact" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 20px; background: #000000; color: #ffffff; text-decoration: none; font-weight: 700; font-size: 17px; border: 2px solid #000000">Choose plan</a>
 </div>
 </div>
 <ul class="perks reveal">
@@ -634,7 +616,7 @@ f.addEventListener("load",function(){setTimeout(go,4000)});}(window,document);
 <details class="faq-d reveal"><summary>Can you help my business show up in ChatGPT and AI search?</summary><p>Yes. Every plan includes AI search setup. So when someone asks ChatGPT, Gemini or Google&rsquo;s AI for a business like yours, those tools know what you do and where you work.</p></details>
 <details class="faq-d reveal"><summary>Do you work with businesses outside Texas?</summary><p>Yes. I work with businesses anywhere in the U.S. Everything happens by phone, email, text and video call, so you never need to meet in person. I set you up to show up in the areas you actually serve, whether that's one city or the whole country.</p></details>
 <details class="faq-d reveal"><summary>How do I get started?</summary><p>Email carsondemny@gmail.com or call (832) 745-3523 and tell me about your business. I'll get back to you quickly.</p></details>
-<div class="reveal" style="margin-top: 40px; display: flex; flex-wrap: wrap; gap: 16px; align-items: center"><span style="font-size: 18px; font-weight: 700">Still have a question?</span><a class="btn-dark btn" href="#contact" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #0f172a; background: #0f172a; color: #ffffff">Ask me directly</a><a class="btn-light btn" href="tel:+18327453523" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #0f172a; background: #ffffff; color: #0f172a">Call (832) 745-3523</a><a class="btn-light btn" href="sms:+18327453523?&amp;body=Hi%20Carson%2C%20I%27m%20interested%20in%20a%20free%20website%20check." style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #0f172a; background: #ffffff; color: #0f172a">Text me</a></div>
+<div class="reveal" style="margin-top: 40px; display: flex; flex-wrap: wrap; gap: 16px; align-items: center"><span style="font-size: 18px; font-weight: 700">Still have a question?</span><a class="btn-dark btn" href="#contact" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #000000; background: #000000; color: #ffffff">Ask me directly</a><a class="btn-light btn" href="tel:+18327453523" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #000000; background: #ffffff; color: #000000">Call (832) 745-3523</a><a class="btn-light btn" href="sms:+18327453523?&amp;body=Hi%20Carson%2C%20I%27m%20interested%20in%20a%20free%20website%20check." style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #000000; background: #ffffff; color: #000000">Text me</a></div>
 </section>
 
 <section id="contact" style="background: #0f172a; color: #ffffff">
@@ -644,9 +626,9 @@ f.addEventListener("load",function(){setTimeout(go,4000)});}(window,document);
 <h2 style="margin: 0; font-size: clamp(36px, 6vw, 72px); letter-spacing: -0.04em; line-height: 0.95">Is your website <mark>costing you customers?</mark></h2>
 <p style="margin: 24px 0 0; font-size: 18px; line-height: 1.6; max-width: 480px">Send your website (or say you don't have one). I'll check it free and call you within a day.</p>
 <div style="margin-top: 32px; display: flex; flex-direction: column; gap: 12px; max-width: 360px">
-<a class="btn-dark btn btn-w" href="tel:+18327453523" style="display: inline-flex; align-items: center; justify-content: center; min-height: 56px; padding: 0 28px; background: #0f172a; color: #ffffff; text-decoration: none; font-weight: 700; font-size: 18px; border: 2px solid #ffffff">Call (832) 745-3523</a>
-<a class="btn-dark btn btn-w" href="sms:+18327453523?&amp;body=Hi%20Carson%2C%20I%27m%20interested%20in%20a%20free%20website%20check." style="display: inline-flex; align-items: center; justify-content: center; min-height: 56px; padding: 0 28px; background: #0f172a; color: #ffffff; text-decoration: none; font-weight: 700; font-size: 18px; border: 2px solid #ffffff">Text (832) 745-3523</a>
-<a class="btn-dark btn btn-w" href="mailto:carsondemny@gmail.com" style="display: inline-flex; align-items: center; justify-content: center; min-height: 56px; padding: 0 28px; background: #0f172a; color: #ffffff; text-decoration: none; font-weight: 700; font-size: 18px; border: 2px solid #ffffff">Email carsondemny@gmail.com</a>
+<a class="btn-dark btn btn-w" href="tel:+18327453523" style="display: inline-flex; align-items: center; justify-content: center; min-height: 56px; padding: 0 28px; background: #000000; color: #ffffff; text-decoration: none; font-weight: 700; font-size: 18px; border: 2px solid #ffffff">Call (832) 745-3523</a>
+<a class="btn-dark btn btn-w" href="sms:+18327453523?&amp;body=Hi%20Carson%2C%20I%27m%20interested%20in%20a%20free%20website%20check." style="display: inline-flex; align-items: center; justify-content: center; min-height: 56px; padding: 0 28px; background: #000000; color: #ffffff; text-decoration: none; font-weight: 700; font-size: 18px; border: 2px solid #ffffff">Text (832) 745-3523</a>
+<a class="btn-dark btn btn-w" href="mailto:carsondemny@gmail.com" style="display: inline-flex; align-items: center; justify-content: center; min-height: 56px; padding: 0 28px; background: #000000; color: #ffffff; text-decoration: none; font-weight: 700; font-size: 18px; border: 2px solid #ffffff">Email carsondemny@gmail.com</a>
 </div>
 </div>
 <form id="check" class="form-card reveal" action="https://formsubmit.co/carsondemny@gmail.com" method="POST" style="flex: 1 1 420px; max-width: 520px">
@@ -692,7 +674,6 @@ f.addEventListener("load",function(){setTimeout(go,4000)});}(window,document);
 <nav class="ft-col" aria-label="Footer: company">
 <h3>Company</h3>
 <a href="#about">About Carson</a>
-<a href="#work">Sample work</a>
 <a href="#pricing">Pricing</a>
 <a href="#faq">FAQ</a>
 <a href="/blog/">Blog</a>
