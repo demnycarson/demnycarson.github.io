@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /cdn/
 
 Sitemap: https://demnyweb.com/sitemap.xml
