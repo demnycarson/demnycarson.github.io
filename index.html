@@ -247,6 +247,19 @@ main>section{line-height:1.6}
 .featured-n{font-weight:700;font-size:18px;letter-spacing:-.01em}
 .featured-t{font-size:14px;color:#334155}
 @media (hover:hover){.featured:hover{background:#0f172a;color:#fff}.featured:hover .featured-t,.featured:hover .featured-k{color:#cbd5e1}}
+/* featured */
+.feat-sec{border-bottom:2px solid #0f172a;background:#fff}
+.feat-in{max-width:1120px;margin:0 auto;padding:72px 24px}
+.feat-logo{font-weight:700;font-size:clamp(40px,6vw,64px);letter-spacing:-.045em;line-height:1;margin:6px 0 32px;color:#0f172a}
+.feat-logo::after{content:"";display:inline-block;width:.22em;height:.22em;border-radius:50%;background:var(--hl);margin-left:.08em}
+.feat-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.feat-card{display:flex;flex-direction:column;gap:10px;border:2px solid #0f172a;border-radius:10px;padding:28px;text-decoration:none;color:#0f172a;background:#fff;transition:transform .18s ease,box-shadow .18s ease}
+.feat-card h3{margin:0;font-size:24px;line-height:1.2;letter-spacing:-.02em}
+.feat-card p{margin:0;font-size:16px}
+.feat-tag{align-self:flex-start;font:500 12px "IBM Plex Mono",monospace;text-transform:uppercase;letter-spacing:.08em;background:var(--hl);color:#fff;padding:5px 8px;border-radius:6px}
+.feat-go{margin-top:auto;padding-top:8px;font-weight:700;color:var(--hl)}
+@media (hover:hover){.feat-card:hover{transform:translate(-3px,-3px);box-shadow:6px 6px 0 var(--hl)}}
+@media (max-width:760px){.feat-grid{grid-template-columns:1fr}}
 /* hero v2 */
 .hero{max-width:1120px;margin:0 auto;padding:80px 24px 64px;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:48px;align-items:center}
 .hero-scores{grid-column:1/-1}
@@ -375,6 +388,7 @@ f.addEventListener("load",function(){setTimeout(go,4000)});}(window,document);
 <a class="nav" href="#rankings" style="text-decoration: none">Rankings</a>
 <a class="nav" href="#who" style="text-decoration: none">Who I help</a>
 <a class="nav" href="#testimonials" style="text-decoration: none">Reviews</a>
+<a class="nav" href="#featured" style="text-decoration: none">Press</a>
 <a class="nav" href="#about" style="text-decoration: none">About</a>
 <a class="nav" href="#pricing" style="text-decoration: none">Pricing</a>
 <a class="nav" href="#faq" style="text-decoration: none">FAQ</a>
@@ -394,7 +408,7 @@ f.addEventListener("load",function(){setTimeout(go,4000)});}(window,document);
 <a class="btn-dark btn" href="#contact" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; background: #000000; color: #ffffff; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #000000">Find out where you rank</a>
 <a class="btn-light btn" href="#rankings" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; background: #ffffff; color: #000000; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #000000">See how it works</a>
 </div>
-<a class="featured" href="https://peekwire.com/article/5-local-seo-google-maps-agencies-worth-knowing-us" target="_blank" rel="noopener"><span class="featured-k">As featured in</span><span class="featured-n">Peekwire</span><span class="featured-t">5 Local SEO &amp; Google Maps Agencies Worth Knowing &#8599;</span></a>
+<a class="featured" href="#featured"><span class="featured-k">As featured in</span><span class="featured-n">Peekwire</span><span class="featured-t">Read my local SEO interview &darr;</span></a>
 </div>
 <div class="hero-demo" aria-hidden="true">
 <div class="hd-card">
@@ -499,6 +513,17 @@ f.addEventListener("load",function(){setTimeout(go,4000)});}(window,document);
 <p class="reveal res-note">Google Maps results from APB Systems clients. Every business is different, and results vary.</p>
 <div class="reveal testi-wrap"><video class="testi-vid" controls playsinline preload="none" data-poster="testimonials-poster.jpg" aria-label="Video testimonials from business owners who worked with APB Systems"><source src="testimonials.mp4" type="video/mp4">Your browser can't play this video. <a href="testimonials.mp4">Download it here.</a></video></div>
 <div class="reveal" style="margin-top: 40px; display: flex; flex-wrap: wrap; gap: 16px; align-items: center"><a class="btn-dark btn" href="#contact" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #000000; background: #000000; color: #ffffff">Get results like this</a><a class="btn-light btn" href="#pricing" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; text-decoration: none; font-weight: 500; font-size: 17px; border: 2px solid #000000; background: #ffffff; color: #000000">See pricing</a></div>
+</div>
+</section>
+
+<section id="featured" class="feat-sec" aria-label="As featured in">
+<div class="feat-in">
+<p class="reveal kick" style="margin: 0 0 12px; font-family: 'IBM Plex Mono', monospace; font-size: 14px; text-transform: uppercase; letter-spacing: 0.08em">As featured in</p>
+<div class="feat-logo reveal" aria-label="Peekwire">Peekwire</div>
+<div class="reveal stagger feat-grid">
+<a class="feat-card" href="https://peekwire.com/article/why-just-set-up-your-google-business-profile-isnt-enough-a-local-seo-interview-with-carson-demny" target="_blank" rel="noopener"><span class="feat-tag">Interview</span><h3>Why &ldquo;just set up your Google Business Profile&rdquo; isn&rsquo;t enough</h3><p>A local SEO interview with Carson Demny.</p><span class="feat-go">Read the interview &#8599;</span></a>
+<a class="feat-card" href="https://peekwire.com/article/5-local-seo-google-maps-agencies-worth-knowing-us" target="_blank" rel="noopener"><span class="feat-tag">Roundup</span><h3>5 Local SEO &amp; Google Maps Agencies Worth Knowing</h3><p>Demny Web Agency named in Peekwire&rsquo;s list.</p><span class="feat-go">Read the article &#8599;</span></a>
+</div>
 </div>
 </section>
 
